@@ -1,0 +1,9 @@
+
+.about-container{
+  position: relative;
+    .about-container-section {
+      position: relative;
+      @import 'section-content';
+    }
+}
+

@@ -1,0 +1,140 @@
+.thumb{
+  height: 100%;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+  > div {
+    height: 275px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid $colorThree;
+    .thumb-overlay {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .6);
+      position: absolute;
+      display: table;
+      transition: transform 0.4s;
+      h3{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+      }
+      .plus{
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 175px;
+        margin-left: -23px;
+        padding: 10px;
+        border-radius: 100%;
+      }
+      .plus:after{
+        content: '';
+        background: url('../images/plus.png') center center;
+        background-size: contain;
+        display: block;
+        //z-index: 50;
+        height: 30px; width: 30px;
+        position: absolute;
+        color: white;
+      }
+    }
+    a{
+      display: block;
+      min-height: 285px;
+    }
+  }
+  > div:hover{
+    cursor: pointer;
+    .thumb-overlay{
+      transform: translateY(100%);
+    }
+  }
+}
+
+.portfolio-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .portfolio-container-section{
+    position: relative;
+    @import 'section-content';
+    .portfolio-work-container{
+      height: 100%;
+      width: 100%;
+      //background-color: rgba(255,255,255,.4);
+      .portfolio-work{
+        display: none;
+        position: fixed;
+        z-index: 45;
+        top: 0; bottom: 0; left: 0; right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 5% 10% 2% 10%;
+        border: 3px solid $colorThree;;
+        margin-bottom: 60px;
+        background-color: $colorTwo;
+        .close-button{
+          position: absolute;
+          left: 1%;
+          top: 2%;
+          width: 5%;
+          height: 5%;
+        }
+        .work-title{
+          text-align: center;
+          width: 50%;
+          height: 40px;
+          padding-bottom: 2px;
+          border-top-left-radius: 25px;
+          background: $colorThree;
+          h3{
+            color: white;
+          }
+        }
+        .work-bottom{
+          height: 100%;
+          width: 100%;
+          background: white;
+          border: 2px solid black;
+          /*box-shadow: inset 1px 1px 3px rgba(0,0,0,.3),
+          1px 1px 2px rgba(0,0,0,.2),
+          40px 35px 70px -10px rgba(0,0,0,.5);*/
+          .work-image{
+            position: relative;
+            max-height: 440px;
+            overflow: scroll;
+          }
+          .work-desc{
+            border-top: 2px solid black;
+            padding: 0 4% 0 4%;
+            text-align: center;
+            overflow: scroll;
+            p{
+              b{
+                color: $colorThree;
+              }
+            }
+          }
+        }
+
+      }
+      .show-work{
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px){
+ .thumb{
+   margin: 0%;
+   width: 33.333%;
+ }
+}

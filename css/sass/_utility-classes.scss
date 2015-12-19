@@ -1,0 +1,164 @@
+.border-bottom{
+  border-bottom: 5px solid black;
+}
+
+.black-background{
+  background: black;
+}
+
+.border-bottom-thin{
+  color: black;
+  border-bottom: 2px dotted black;
+}
+
+.text-padding-top{
+  padding-top: 10px;
+}
+
+.border-middle{
+  height: 1px;
+  width: 60%;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+.background-wrapper{
+  height: 100%;
+  width: 100%;
+}
+.bg-one{
+  background-color: $colorTwo;
+}
+.bg-two{
+  background-color: white;
+  //background-color: $colorThree;
+}
+.bg-three{
+  background-color: $colorThree;
+}
+.bg-four {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQIW2P8/+5sGgMaYAQJMgoZz0IWp1AQAFUmEyaCCyo5AAAAAElFTkSuQmCC") repeat;
+}
+
+.bg-five{
+  background: url("../images/lil_fiber.png") repeat;
+}
+
+.bg-white-opac{
+  background-color: rgba(255,255,255,0.8);
+}
+
+.bg-gradient{
+  background: linear-gradient(181deg, #ffeecc, #ffffff, #ffeecc);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  -o-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+    0%{background-position:87% 0%}
+    50%{background-position:14% 100%}
+    100%{background-position:87% 0%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:87% 0%}
+    50%{background-position:14% 100%}
+    100%{background-position:87% 0%}
+  }
+  @-o-keyframes AnimationName {
+    0%{background-position:87% 0%}
+    50%{background-position:14% 100%}
+    100%{background-position:87% 0%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:87% 0%}
+    50%{background-position:14% 100%}
+    100%{background-position:87% 0%}
+  }
+}
+.work-break{
+  //height: 20px;
+  width: 20%;
+  margin: 0 40% 0 40%;
+  border-bottom: 3px dotted $colorThree;
+}
+
+.circle-pic{
+  border-radius: 15%;
+}
+.borders-vertical{
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+}
+
+.borders-bottom{
+  border-bottom: 2px black solid;
+}
+
+.borders-sides{
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+}
+
+.skewed-right{
+  -webkit-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
+  border: 2px solid black;
+}
+
+.skewed-left{
+  //width: 90%;
+  -webkit-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.pad-top{
+  padding-top: 20px;
+}
+
+.pad-bottom{
+  padding-bottom: 40px;
+}
+
+.font-zero{
+  font-size: 0;
+}
+
+.reset-font{
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.color-text{
+  color: $colorThree;
+}
+
+.white-text{
+  color: white;
+}
+.z-wayback{
+  z-index: -999;
+}
+.z-back{
+  z-index: -1;
+}
+
+.z-front{
+  z-index: 1;
+}
+
+// Would love to achieve this without the use of negative margins
+.contact-hack{
+  position: relative;
+  height: 100vh;
+  margin-top: -300px;
+  z-index: -1;
+}
+
+.title-padding{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

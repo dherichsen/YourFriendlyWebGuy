@@ -1,0 +1,143 @@
+.resources-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  //background-color: $colorOne;
+  //overflow: hidden;
+  .resources-container-section {
+    //background-color: rgba(255,255,255,.8);
+    position: relative;
+    padding-top: 20px;
+    @import 'section-content';
+    ul{
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      margin-top: 25px;
+      .resource-tab{
+        text-align: center;
+        width: 25%;
+        display: inline-block;
+        .tab-btn{
+          height: 46px;
+          width: 100%;
+          padding-bottom: 2px;
+          border-top-left-radius: 25px;
+          border-top-right-radius: 25px;
+          border: 2px solid black;
+          background: $colorThree;
+          color: white;
+          font-size: 32px;
+          line-height: 40px;
+          font-family: 'Amatic SC', cursive;
+          //margin: auto;
+        }
+        .tab-btn:hover{
+          cursor: pointer;
+        }
+        .tab-btn:focus{
+          outline: none;
+        }
+        .active-tab {
+          position: relative;
+          width: 125%;
+          left: -12.5%;
+          background-color: $colorTwo;
+          color: black;
+          border-bottom: none;
+        }
+      }
+      .resource-tab:first-child .active-tab{
+        left: 0%;
+      }
+      .resource-tab:last-child .active-tab{
+        left: -25%;
+      }
+
+    }
+    .list-container{
+      position: relative;
+      margin-bottom: 100px;
+      width: 100%;
+      height: 440px;
+      background-color: $colorTwo;
+      border: 2px solid black;
+      border-top: none;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      .list-inner-container{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: 1px solid black;
+        font-size: 0;
+        > div{
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          vertical-align: top;
+          form{
+            width: 100%;
+            height: 100%;
+            .sites{
+              height: 100%;
+              width: 100%;
+              display: none;
+              option{
+                font-size: 22px;
+                line-height: 31px;
+              }
+              option:checked{
+                background: $colorThree repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkWNHwHwAEAQIpL8AvUwAAAABJRU5ErkJggg==);
+              }
+            }
+            .active-form{
+              display: block;
+            }
+            .sites:focus{
+              outline: none;
+              //padding: 3px 0px 3px 3px;
+              //margin: 5px 1px 3px 0px;
+              //border: 1px solid red;
+            }
+          }
+        }
+        .left{
+          //background-color: blue;
+        }
+        .right{
+          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAZklEQVQYV2P8//5sPaOgcSMDCKxsrP/v5sMA5y+vf8YIEgcr2rWFgSG8HqwQzN+xKZ0hslEKrACbzv8efjNBJjGCJLHphJuE4gagnTCdMJMRboDaie4miBuw6IT5hhEkCXItLt8AAGbsVzLdewi6AAAAAElFTkSuQmCC) repeat;
+          .btns-container{
+            height: 100%;
+            width: 100%;
+            padding: 5% 10%;
+            //background-color: white;
+            .btn{
+              width: 80%;
+              margin: 15% 10%;
+              background: $colorThree;
+              color: #fff;
+              font-size: 16px;
+              line-height: 26px;
+              height: auto;
+              border-radius: 8px;
+              text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 1px 0 #666, 0 3px 0 #444, 0 5px 5px rgba(0,0,0,0.4);
+              border: 3px solid #fff;
+            }
+            .btn:hover{
+              cursor: pointer;
+              background-color: $colorTwo;
+              color: black;
+              border: 3px solid black;
+              box-shadow: 0 1px 0 #fff, 0 3px 0 #ccc, 0 5px 5px rgba(255,255,255,0.4);
+            }
+            .btn:focus{
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

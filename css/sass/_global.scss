@@ -1,0 +1,63 @@
+body{ margin: 0; padding: 0;}
+html{ margin: 0; padding: 0;}
+
+@import 'utility-classes';
+
+// fix this
+.container{
+  .container-top{
+    position: relative;
+    height: 150px;
+    .container-header{
+      position: relative;
+      width: 150px;
+      top: 50px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      h1{
+        background-color: white;
+        //font-size: 44px;
+        color: black;
+        text-align: center;
+        border: 3px solid black;
+      }
+    }
+  }
+  @import 'nav-bar';
+  @import 'home';
+  @import 'background';
+  @import 'about';
+  @import 'image-gallery';
+  @import 'portfolio';
+  @import 'contact';
+}
+
+// If the screen is at least 480px wide
+@media screen and (min-width: 480px){
+  .nav-top,
+  .nav-menu,
+  .about-container-header,
+  .about-container-section,
+  .portfolio-container-section,
+  .contact-container-section,
+  .resources-container-section{
+    @include row;
+  }
+  .container{
+    .container-top{
+      height: 300px;
+      .container-header{
+        @include offset(left,1.5);
+        width: columns(3);
+        margin-top: 100px;
+        margin-bottom: 100px;
+        top: 0; bottom: 0;
+        h1{
+          font-size: 44px;
+          border: 5px solid black;
+        }
+      }
+    }
+    @import 'resources';
+  }
+}
