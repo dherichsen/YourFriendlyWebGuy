@@ -58,7 +58,7 @@
   }
 }
 
-@media screen and (min-width: 480px){
+@media screen and (min-device-width: 480px){
   .section-content{
     position: relative;
     @include offset(left,.5);

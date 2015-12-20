@@ -553,7 +553,7 @@ html {
     height: 100%;
     border-top: solid white 1px;
     background-color: #00A880; }
-@media screen and (min-width: 480px) {
+@media screen and (min-device-width: 480px) {
   .container .home-container {
     min-height: 650px; }
     .container .home-container .home-top {
@@ -661,7 +661,7 @@ html {
         font-size: 20px;
         color: #00A880;
         font-weight: bold; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-device-width: 480px) {
       .container .about-container .about-container-section .section-content {
         position: relative;
         float: left;
@@ -997,7 +997,7 @@ html {
         font-size: 20px;
         color: #00A880;
         font-weight: bold; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-device-width: 480px) {
       .container .portfolio-container .portfolio-container-section .section-content {
         position: relative;
         float: left;
@@ -1179,7 +1179,7 @@ html {
               color: #00A880; }
       .container .portfolio-container .portfolio-container-section .portfolio-work-container .show-work {
         display: block; }
-@media screen and (min-width: 480px) {
+@media screen and (min-device-width: 480px) {
   .container .thumb {
     margin: 0%;
     width: 33.333%; } }
@@ -1244,7 +1244,7 @@ html {
         font-size: 20px;
         color: #00A880;
         font-weight: bold; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-device-width: 480px) {
       .container .contact-container .contact-container-section .section-content {
         position: relative;
         float: left;
@@ -1374,7 +1374,7 @@ html {
       animation-duration: 1s;
       animation-iteration-count: infinite; }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-device-width: 480px) {
   .nav-top,
   .nav-menu,
   .about-container-header,
@@ -1510,7 +1510,7 @@ html {
           font-size: 20px;
           color: #00A880;
           font-weight: bold; } }
-    @media screen and (min-width: 480px) and (min-width: 480px) {
+    @media screen and (min-device-width: 480px) and (min-device-width: 480px) {
       .container .resources-container .resources-container-section .section-content {
         position: relative;
         float: left;
@@ -1596,7 +1596,7 @@ html {
             padding: 5px; }
       .container .resources-container .resources-container-section .section-content-wide {
         width: 100%; } }
-@media screen and (min-width: 480px) {
+@media screen and (min-device-width: 480px) {
       .container .resources-container .resources-container-section .skills li {
         margin-left: 15%; }
       .container .resources-container .resources-container-section .skills li:hover {
