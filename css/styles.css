@@ -481,7 +481,10 @@ html {
     filter: blur(15px); }
   .container .home-container .home-middle {
     height: 50vh;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%; }
     .container .home-container .home-middle .home-middle-header {
       position: relative;
@@ -581,16 +584,12 @@ html {
           }
         }
       }*/ }
-    .container .home-container .home-middle:before {
-      height: 500px; }
-    .container .home-container .home-middle {
-      height: 500px; }
-      .container .home-container .home-middle .home-middle-header {
-        padding-top: 50px; }
-      .container .home-container .home-middle .scroll-button {
-        width: 60px;
-        height: 60px;
-        bottom: 175px; } }
+    .container .home-container .home-middle .home-middle-header {
+      padding-top: 50px; }
+    .container .home-container .home-middle .scroll-button {
+      width: 60px;
+      height: 60px;
+      bottom: 25px; } }
 .container .about-background {
   background: url("../images/himalayas.jpg") no-repeat fixed center bottom;
   background-size: cover; }

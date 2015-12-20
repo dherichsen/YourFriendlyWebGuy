@@ -28,7 +28,8 @@
   }
   .home-middle{
     height: 50vh;
-    position: relative;
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
     width: 100%;
     .home-middle-header{
       position: relative;
@@ -111,16 +112,16 @@
       }*/
     }
     .home-middle:before{
-      height: 500px;
+      //height: 500px;
     }
     .home-middle{
-      height: 500px;
+      //height: 500px;
       .home-middle-header{
         padding-top: 50px;
       }
       .scroll-button{
         width: 60px; height: 60px;
-        bottom: 175px;
+        bottom: 25px;
       }
     }
   }
