@@ -90,6 +90,7 @@
       overflow: hidden;
       box-shadow: inset 1px 1px 3px rgba(0,0,0,.3),
       1px 1px 2px rgba(0,0,0,.8);
+      cursor: pointer;
       a{
         color: white;
         text-decoration: none;
@@ -97,6 +98,9 @@
         bottom: -28px; left: 0; right: 0;
         text-align: center;
       }
+    }
+    div{
+
     }
     .bghigh{
       border: 1px solid black;
@@ -133,6 +137,7 @@
     .nav-bar-inner{
       .first-nav{
         transform: skew(15deg, 0);
+        animation-delay:0.9s;
         height: 250px;
         @include offset(left,.5);
         a{
@@ -140,6 +145,7 @@
         }
       }
       .second-nav{
+        animation-delay: .6s;
         transform: skew(15deg, 0);
         height: 150px;
         @include offset(left,1.5);
@@ -148,6 +154,7 @@
         }
       }
       .home-nav{
+        animation-delay: .3s;
         overflow: visible;
         border: none;
         background: none;
@@ -166,6 +173,7 @@
       }
       .home-nav:before,
       .home-nav:after{
+        animation-delay: .3s;
         background: black;
         border-bottom: 2px solid white;
         content: '';
@@ -186,6 +194,7 @@
         border-right: 2px solid white;
       }
       .third-nav{
+        animation-delay: .6s;
         transform: skew(-15deg, 0);
         height: 150px;
         @include offset(left,3.5);
@@ -194,6 +203,7 @@
         }
       }
       .fourth-nav{
+        animation-delay: .9s;
         transform: skew(-15deg, 0);
         height: 250px;
         @include offset(left,4.5);
@@ -218,12 +228,22 @@
         overflow: hidden;
         box-shadow: inset 1px 1px 3px rgba(0,0,0,.3),
         1px 1px 2px rgba(0,0,0,.8);
+        transition: all 0.5s ease;
         a{
           color: white;
           text-decoration: none;
           position: absolute;
           bottom: -28px; left: 0; right: 0;
           text-align: center;
+        }
+      }
+      .first-nav:hover,.second-nav:hover, .third-nav:hover, .fourth-nav:hover {
+        background-color: rgba(255,255,255,.6);
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        a{
+          color: black;
         }
       }
       .bghigh{
@@ -234,22 +254,27 @@
         }
       }
       .fixed-one{
+        transition: none;
         position: fixed;
         margin-top: -200px;
       }
       .fixed-two{
+        transition: none;
         position: fixed;
         margin-top: -100px;
       }
       .fixed-home{
+        transition: none;
         position: fixed;
         margin-top: -50px;
       }
       .fixed-three{
+        transition: none;
         position: fixed;
         margin-top: -100px;
       }
       .fixed-four{
+        transition: none;
         position: fixed;
         margin-top: -200px;
       }

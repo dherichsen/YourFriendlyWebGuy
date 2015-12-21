@@ -4,17 +4,18 @@
     <link rel = "stylesheet" type = "text/css" href = "css/styles.css">
     <link rel="stylesheet" href="css/vegas.min.css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:700,400,300|Amatic+SC:700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
 
 <div class = "container">
     <div class = "nav-bar-container">
         <div class = "nav-bar-inner">
-            <div id = "nav-one" class = "first-nav" ><a id = "nav-link-one" href = "#about">About</a></div>
-            <div id = "nav-two" class = "second-nav"><a id = "nav-link-two" href = "#portfolio">Portfolio</a></div>
-            <div id = "nav-home" class = "home-nav"><a id = "nav-link-home" href = "#home_container"><img id = "home-link-img" src = "images/wg.png" height = "100%"/></a></div>
-            <div id = "nav-three" class = "third-nav"><a id = "nav-link-four" href = "#resources">Resources</a></div>
-            <div id = "nav-four" class = "fourth-nav"><a id = "nav-link-three" href = "#contact">Contact</a></div>
+            <div id = "nav-one" class = "first-nav animated bounceInDownSkewPos" ><a id = "nav-link-one" href = "#about">About</a></div>
+            <div id = "nav-two" class = "second-nav animated bounceInDownSkewPos"><a id = "nav-link-two" href = "#portfolio">Portfolio</a></div>
+            <div id = "nav-home" class = "home-nav animated bounceInDown"><a id = "nav-link-home" href = "#home_container"><img id = "home-link-img" src = "images/wg.png" height = "100%"/></a></div>
+            <div id = "nav-three" class = "third-nav animated bounceInDownSkewNeg"><a id = "nav-link-four" href = "#resources">Resources</a></div>
+            <div id = "nav-four" class = "fourth-nav animated bounceInDownSkewNeg"><a id = "nav-link-three" href = "#contact">Contact</a></div>
         </div>
     </div>
 
@@ -22,10 +23,10 @@
         <div class = "home-top">
 
         </div>
-        <div class = "home-middle">
+        <div class = "home-middle animated slideInUp">
             <div class = "home-middle-header">
-                <h1>Let me help you.</h1>
-                <h2>My name is Dave & I develop websites</h2>
+                <h1 class = "animated fadeInRightBig">Let me help you.</h1>
+                <h2 class = "animated fadeInLeftBig"> My name is Dave & I develop websites</h2>
             </div>
             <a class = "scroll-button" id = "scrollbtn" href = "#about"></a>
         </div>
@@ -106,7 +107,7 @@
                         <div class = "border-middle"></div>
                     </div>
                     <div class = "content-half font-zero">
-                        <img src = "images/florida-palms.jpg" width = "90%" class = "circle-pic"/>
+                        <div class = "content-half-image"></div>
                     </div>
                     <div class = "content-half font-zero white-text">
                         <p>After growing up in New England I finally decided that enough was enough.  I packed my bags, and trekked down 95 in search for perpetual sunshine (California was too far).  I found my new home in Boynton Beach, FL and will be here for the indefinite future.  A smart man once said... </p><h4 class = "white-text">If you can't beat 'em, join 'em!</h4>
@@ -386,9 +387,11 @@
 
 </div>
 <script src = "js/jquery.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
 <script src="js/vegas.min.js"></script>
 <script src="js/gridOverlay.js"></script>
 <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>

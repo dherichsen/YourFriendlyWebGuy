@@ -44,6 +44,10 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
 
+    /*$('.contact-background').parallax({speed : -.25, coffset: "-20"});
+    $('.resources-background').parallax({speed : -.25, coffset: "-20"});
+    $('.portfolio-background').parallax({speed : -.25, coffset: "-20"});*/
+
     $(".home-container").vegas({
         delay: 5000,
         slides: [
@@ -56,15 +60,17 @@ $(document).ready(function(){
         transitionDuration: 3000,
         transition: 'blur2'
     });
-    // Handles the highlighting of the nav butons
-    $('.nav-bar-inner div a').hover(function(evt){
-        if($(this).attr('id') != "nav-link-home") {
+    /* Handles the highlighting of the nav butons
+    $('.nav-bar-inner div').hover(function(evt){
+        if($(this).child().attr('id') != "nav-link-home") {
             console.log($(this).attr('id'));
             $(evt.target).parent().addClass('bghigh');
         }
     },function(evt){
         $(evt.target).parent().removeClass('bghigh');
     });
+    */
+
 
     // Handles the contact clipboard
     var clipboard = new Clipboard('.pulse');
@@ -112,9 +118,10 @@ $(document).ready(function(){
     });
 
     // Handles navation
-    $('.nav-bar-inner div a').on('click', function(event) {
+    $('.nav-bar-inner div').on('click', function(event) {
         event.preventDefault();
-        var targetID = $(this).attr('href');
+        var targetID = $(this).children().attr('href');
+        console.log(targetID);
         var targetST = $(targetID).offset().top;
         $('body, html').animate({
             scrollTop: targetST + 'px'
