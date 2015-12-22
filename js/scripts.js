@@ -156,7 +156,6 @@ $(document).ready(function(){
         var targetID = $(this).attr('id');
         var idWrap = "#";
         var newTarget = idWrap.concat(targetID.substring(0,(targetID.indexOf('-'))+1).concat("frame"));
-        console.log(newTarget);
         $(newTarget).addClass('show-work');
     });
 
@@ -166,7 +165,6 @@ $(document).ready(function(){
         var targetID = $(this).parent().attr('id');
         var idWrap = "#";
         var newTarget = idWrap.concat(targetID);
-        console.log(targetID);
         $(newTarget).removeClass('show-work');
     });
 
@@ -184,7 +182,6 @@ $(document).ready(function(){
     $('.nav-bar-inner div').on('click', function(event) {
         event.preventDefault();
         var targetID = $(this).children().attr('href');
-        console.log(targetID);
         var targetST = $(targetID).offset().top;
         $('body, html').animate({
             scrollTop: targetST + 'px'
