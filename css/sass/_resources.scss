@@ -10,6 +10,7 @@
     padding-top: 20px;
     @import 'section-content';
     ul{
+      position: relative;
       margin: 0;
       list-style: none;
       padding: 0;
@@ -18,10 +19,11 @@
         text-align: center;
         width: 25%;
         display: inline-block;
+        height: 46px;
         .tab-btn{
-          height: 46px;
+          padding-bottom: 20px;
+          position: relative;
           width: 100%;
-          padding-bottom: 2px;
           border-top-left-radius: 25px;
           border-top-right-radius: 25px;
           border: 2px solid black;
@@ -30,6 +32,7 @@
           font-size: 32px;
           line-height: 40px;
           font-family: 'Amatic SC', cursive;
+          transition: all .5s ease;
           //margin: auto;
         }
         .tab-btn:hover{
@@ -39,13 +42,21 @@
           outline: none;
         }
         .active-tab {
+          z-index: 20;
           position: relative;
           width: 125%;
           left: -12.5%;
           background-color: $colorTwo;
           color: black;
           border-bottom: none;
+          animation: none;
         }
+        .active-tab:hover{
+          background-color: $colorTwo;
+        }
+      }
+      .tab-btn:hover{
+        background-color: $colorFour;
       }
       .resource-tab:first-child .active-tab{
         left: 0%;
@@ -65,6 +76,7 @@
       border-top: none;
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      z-index: 25;
       .list-inner-container{
         width: 100%;
         height: 100%;
@@ -73,7 +85,6 @@
         font-size: 0;
         > div{
           display: inline-block;
-          width: 50%;
           height: 100%;
           vertical-align: top;
           form{
@@ -84,11 +95,11 @@
               width: 100%;
               display: none;
               option{
-                font-size: 22px;
+                font-size: 16px;
                 line-height: 31px;
               }
               option:checked{
-                background: $colorThree repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkWNHwHwAEAQIpL8AvUwAAAABJRU5ErkJggg==);
+                background: $colorThree repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2PUmtv/HwAEpgJXOwX0WwAAAABJRU5ErkJggg==);
               }
             }
             .active-form{
@@ -103,37 +114,41 @@
           }
         }
         .left{
-          //background-color: blue;
+          width: 75%;
         }
         .right{
+          width: 25%;
           background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAZklEQVQYV2P8//5sPaOgcSMDCKxsrP/v5sMA5y+vf8YIEgcr2rWFgSG8HqwQzN+xKZ0hslEKrACbzv8efjNBJjGCJLHphJuE4gagnTCdMJMRboDaie4miBuw6IT5hhEkCXItLt8AAGbsVzLdewi6AAAAAElFTkSuQmCC) repeat;
           .btns-container{
             height: 100%;
             width: 100%;
-            padding: 5% 10%;
+            //padding: 5% 10%;
             //background-color: white;
             .btn{
-              width: 80%;
-              margin: 15% 10%;
+              width: 100%;
               background: $colorThree;
               color: #fff;
-              font-size: 16px;
-              line-height: 26px;
-              height: auto;
-              border-radius: 8px;
+              font-size: 32px;
+              //line-height: 26px;
+              font-family: 'Amatic SC', cursive;
+              height: 50%;
               text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 1px 0 #666, 0 3px 0 #444, 0 5px 5px rgba(0,0,0,0.4);
               border: 3px solid #fff;
+              box-shadow: inset 0 0 0 1px white;
+              transition: all .5s ease;
             }
             .btn:hover{
               cursor: pointer;
-              background-color: $colorTwo;
-              color: black;
-              border: 3px solid black;
-              box-shadow: 0 1px 0 #fff, 0 3px 0 #ccc, 0 5px 5px rgba(255,255,255,0.4);
+              background-color: $colorFour;
             }
             .btn:focus{
               outline: none;
+            }
+            .btn:active{
+              box-shadow: inset 0 0 0 1px black,inset 0 5px 30px black;
+            }
+            .btn:last-child{
+              border-top: none;
             }
           }
         }

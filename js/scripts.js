@@ -47,6 +47,8 @@ $(document).ready(function(){
     /*$('.contact-background').parallax({speed : -.25, coffset: "-20"});
     $('.resources-background').parallax({speed : -.25, coffset: "-20"});
     $('.portfolio-background').parallax({speed : -.25, coffset: "-20"});*/
+    //$('.bg-about1').parallax({speed : -.25, coffset: "-20"});
+
 
     $(".home-container").vegas({
         delay: 5000,
@@ -71,10 +73,55 @@ $(document).ready(function(){
     });
     */
 
+    // Opens a new window with the page specified
+    $('#openWindowBtn').on('click', function(event) {
+        var link = $('.active-form').val();
+        var win = window.open(link, '_blank');
+        if(win){
+            win.focus();
+        }else{
+            alert('Please allow popups for this site');
+        }
+    });
+
+    $('#bookmarkPageBtn').click(function(e) {
+        var bookmarkURL = window.location.href;
+        var bookmarkTitle = document.title;
+
+        if ('addToHomescreen' in window && window.addToHomescreen.isCompatible) {
+            // Mobile browsers
+            addToHomescreen({ autostart: false, startDelay: 0 }).show(true);
+        } else if (window.sidebar && window.sidebar.addPanel) {
+            // Firefox version < 23
+            window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+        } else if ((window.sidebar && /Firefox/i.test(navigator.userAgent)) || (window.opera && window.print)) {
+            // Firefox version >= 23 and Opera Hotlist
+            $(this).attr({
+                href: bookmarkURL,
+                title: bookmarkTitle,
+                rel: 'sidebar'
+            }).off(e);
+            return true;
+        } else if (window.external && ('AddFavorite' in window.external)) {
+            // IE Favorite
+            window.external.AddFavorite(bookmarkURL, bookmarkTitle);
+        } else {
+            // Other browsers (mainly WebKit - Chrome/Safari)
+            alert('Press ' + (/Mac/i.test(navigator.userAgent) ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+        }
+
+        return false;
+    });
+
 
     // Handles the contact clipboard
-    var clipboard = new Clipboard('.pulse');
+    var clipboardTwo = new Clipboard('.pulse');
     $('.pulse').on('click', function(event) {
+        event.preventDefault();
+    });
+
+    // Disables href on polaroid
+    $('.polaroids a').on('click', function(event) {
         event.preventDefault();
     });
 
@@ -85,6 +132,22 @@ $(document).ready(function(){
         $('body, html').animate({
             scrollTop: targetST + 'px'
         }, 700);
+    });
+
+    $('#dwnldResume').on('click',function(event){
+       window.open('resources/dave_erichsen_resume.pdf');
+    });
+
+    $('#showBio').on('click',function(event){
+        $('.full-bio').addClass('show-bio');
+        $('#showBio').css("display","none");
+        $('#hideBio').css("display","inline-block");
+    });
+
+    $('#hideBio').on('click',function(event){
+        $('.full-bio').removeClass('show-bio');
+        $('#hideBio').css("display","none");
+        $('#showBio').css("display","inline-block");
     });
 
     // Portfolio open buton

@@ -5,14 +5,55 @@
 
 // Styling for sections of text
 .content-text {
+  position: relative;
   padding-top: 20px;
   padding-left: 4%;
   padding-right: 4%;
+  width: 100%;
   h2{  font-weight: 400; text-align: left;  }
   h3{  text-align: center;  }
   p{ strong {  font-size: 22px;  } }
   p:last-child{  margin-bottom: 40px;  }
   .white-text{ color: white;}
+  .about-btn-container{
+    width: 500px;
+    margin: 0 auto;
+    padding: 25px 0;
+    margin-bottom: 30px;
+    #hideBio, #showBio{
+      margin-right: 15px;
+    }
+    .aboutBtn{
+      //position: relative;
+      width: 240px;
+      display: inline-block;
+      background: none;
+      color: #fff;
+      font-size: 32px;
+      //line-height: 26px;
+      font-family: 'Amatic SC', cursive;
+      height: 50%;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      border: 3px solid #fff;
+      border-radius: 2px;
+      transition: all .3s ease;
+    }
+    .aboutBtn:hover{
+      cursor: pointer;
+      background-color: rgba(0,0,0,.2);
+    }
+    #hideBio{
+      display: none;
+    }
+  }
+
+  .full-bio{
+    display: none;
+  }
+  .show-bio{
+    display: block;
+    padding-bottom: 40px;
+  }
 }
 
 // Styling for interests section
@@ -58,7 +99,7 @@
   }
 }
 
-@media screen and (min-device-width: 480px){
+@media screen and (min-width: 800px){
   .section-content{
     position: relative;
     @include offset(left,.5);
@@ -95,6 +136,7 @@
           }
         }
       }
+
     }
     // Section for dividing the content in half
     .content-half{
@@ -149,7 +191,8 @@
         p{
           margin: 0;
           margin-left: 25px;
-          font-family: 'Actor', sans-serif;
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 300;
           font-size: 20px;
           line-height: 31px;
           strong{
@@ -177,6 +220,47 @@
   .section-content-wide{
     width: columns(6);
   }
+}
+
+@media screen and (min-width:480px) and (max-width: 800px){
+  .section-content{
+    .content-university{
+      background-color: #fff;
+      padding: 10px 0 5px 0;
+      border: 2px solid black;
+      .university-left{
+        margin: 0 3% 0 11%;
+        width: 19%;
+        display: none;
+      }
+      .university-right{
+
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10px;
+        h3{
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 300;
+          text-align: center;
+          font-size: 26px;
+        }
+        p{
+          margin: 0;
+          margin-left: 25px;
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 31px;
+          strong{
+            font-style: italic;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 
@@ -220,6 +304,9 @@
     color: white;
     text-align: center;
   }
+  h2:last-child{
+    padding-top: 4px;
+  }
   p{
     color: white;
     margin: 0 auto;
@@ -242,6 +329,4 @@
   animation-name: pulse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  //animation-timing-function: ease-out;
-  //animation-fill-mode: forwards;
 }

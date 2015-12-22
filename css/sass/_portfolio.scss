@@ -77,13 +77,13 @@
         width: 100%;
         height: 100%;
         padding: 5% 10% 2% 10%;
-        border: 3px solid $colorThree;;
+        //border: 3px solid $colorThree;;
         margin-bottom: 60px;
-        background-color: $colorTwo;
+        background-color: rgba(0,0,0,.8);
         .close-button{
           position: absolute;
-          left: 1%;
-          top: 2%;
+          left: 10px;
+          top: 10px;
           width: 5%;
           height: 5%;
         }
@@ -102,7 +102,7 @@
           height: 100%;
           width: 100%;
           background: white;
-          border: 2px solid black;
+          border: 2px solid white;
           /*box-shadow: inset 1px 1px 3px rgba(0,0,0,.3),
           1px 1px 2px rgba(0,0,0,.2),
           40px 35px 70px -10px rgba(0,0,0,.5);*/
@@ -120,6 +120,12 @@
               b{
                 color: $colorThree;
               }
+              a{
+                color: $colorThree;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: bold;
+              }
             }
           }
         }
@@ -132,7 +138,7 @@
   }
 }
 
-@media screen and (min-device-width: 480px){
+@media screen and (min-width: 480px){
  .thumb{
    margin: 0%;
    width: 33.333%;
