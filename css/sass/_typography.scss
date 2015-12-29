@@ -1,40 +1,10 @@
-/*ul, li{
-  margin: 0;
-  list-style-type: none;
-}*/
-
-*{
-  box-sizing: border-box;
-}
-
-ul,li,p{
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-li{
-  font-size: 16px;
-  line-height: 26px;
-}
-
-a{
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  font-size: 14px;
-}
-
+// Sets the margins to all headers to 0 and optimizes text legibility
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   text-rendering: optimizelegibility;
 }
 
-h1{
-  text-transform: uppercase;
-}
-
-h1,h2{
-  color: white;
-}
-
+// Sets the font families
 h1,h3,h4{
   font-family: 'Amatic SC', cursive;
 }
@@ -42,11 +12,22 @@ h2{
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
 }
+ul,li,p{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+// Sets the font colors
+h1,h2,a{
+  color: white;
+}
+
 h2,h3,h4{
   color: $colorThree;
 }
 
+// Sets the font sizes for small devices
 h1{
+  text-transform: uppercase;
   font-size: 36px;
   line-height: 40px;
 }
@@ -62,11 +43,20 @@ h4{
   font-size: 14px;
   line-height: 26px;
 }
-
 p{
   font-size: 12px;
   line-height: 20px;
 }
+a{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+}
+li{
+  font-size: 16px;
+  line-height: 26px;
+}
+
+
 
 // If full screen
 @media screen and (min-width:480px){

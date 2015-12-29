@@ -1,7 +1,11 @@
+// Sets the margin and padding of the document to 0
 body{ margin: 0; padding: 0;}
 html{ margin: 0; padding: 0;}
 
 @import 'utility-classes';
+
+// Sets the layout for all box-sizing
+*{  box-sizing: border-box;  }
 
 // fix this
 .container{
