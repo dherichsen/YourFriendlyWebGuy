@@ -477,7 +477,7 @@ html {
     .container .nav-bar-container .nav-bar-inner {
       height: 100%;
       width: 80%;
-      min-width: 480px;
+      min-width: 320px;
       margin: 0 auto;
       font-size: 0; }
       .container .nav-bar-container .nav-bar-inner .home-nav a {
