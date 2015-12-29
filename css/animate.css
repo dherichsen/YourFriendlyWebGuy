@@ -3408,10 +3408,13 @@
   }
 }
 
-.bounceInDownSkewNeg {
-  -webkit-animation-name: bounceInDownSkewNeg;
-  animation-name: bounceInDownSkewNeg;
+@media screen and (min-width: 800px){
+  .bounceInDownSkewNeg {
+    -webkit-animation-name: bounceInDownSkewNeg;
+    animation-name: bounceInDownSkewNeg;
+  }
 }
+
 
 @-webkit-keyframes bounceInDownSkewPos {
   from, 60%, 75%, 90%, to {
@@ -3481,10 +3484,13 @@
   }
 }
 
-.bounceInDownSkewPos {
-  -webkit-animation-name: bounceInDownSkewPos;
-  animation-name: bounceInDownSkewPos;
+@media screen and (min-width: 800px){
+  .bounceInDownSkewPos {
+    -webkit-animation-name: bounceInDownSkewPos;
+    animation-name: bounceInDownSkewPos;
+  }
 }
+
 
 
 @-webkit-keyframes hvr-bob {
