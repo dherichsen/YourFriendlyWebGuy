@@ -5,6 +5,7 @@ html{ margin: 0; padding: 0;}
 
 // fix this
 .container{
+  overflow: hidden;
   .container-top{
     position: relative;
     height: 150px;
