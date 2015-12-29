@@ -5,6 +5,31 @@
   .contact-container-section {
     //background-color: rgba(255,255,255,.8);
     position: relative;
-    @import 'section-content';
+    //@import 'section-content';
+    .content-contact{
+      width: 100%;
+      min-height: 400px;
+      padding-top: 50px;
+      padding-bottom:  25px;
+      a{
+        padding: 25px;
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+      }
+      h2{
+        color: white;
+        text-align: center;
+      }
+      h2:last-child{
+        padding-top: 4px;
+      }
+      p{
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
   }
 }

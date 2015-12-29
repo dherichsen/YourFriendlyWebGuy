@@ -81,9 +81,6 @@ html {
 .border-bottom {
   border-bottom: 5px solid black; }
 
-.black-background {
-  background: black; }
-
 .border-bottom-thin {
   color: black;
   border-bottom: 2px dotted black; }
@@ -97,63 +94,6 @@ html {
   border-bottom: 1px solid black;
   margin-bottom: 40px; }
 
-.background-wrapper {
-  height: 100%;
-  width: 100%; }
-
-.bg-one {
-  background-color: #E9C46A; }
-
-.bg-two {
-  background-color: rgba(255, 255, 255, 0.8); }
-
-.bg-three {
-  background-color: #2A9D8F; }
-
-.bg-four {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAHElEQVQIW2N8fTjTmAEHYARJitpOP4tNftBJAgDvsxpSdI0OzQAAAABJRU5ErkJggg==") repeat; }
-
-.bg-five {
-  background: url("../images/lil_fiber.png") repeat; }
-
-.bg-white-opac {
-  background-color: rgba(255, 255, 255, 0.8); }
-
-.bg-gradient {
-  background: linear-gradient(181deg, #E9C46A, white, #E9C46A);
-  background-size: 600% 600%;
-  -webkit-animation: AnimationName 12s ease infinite;
-  -moz-animation: AnimationName 12s ease infinite;
-  -o-animation: AnimationName 12s ease infinite;
-  animation: AnimationName 12s ease infinite; }
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
-@-o-keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
-@keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
 .work-break {
   width: 20%;
   margin: 0 40% 0 40%;
@@ -268,11 +208,59 @@ html {
 .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite; }
+
 * {
   box-sizing: border-box; }
 
 .container {
-  overflow: hidden; }
+  overflow: hidden;
+  /* Content for a section divded in thirds
+  .content-divided{
+    position: relative;
+    width: 100%;
+    > div{
+      display: block;
+      //height: 285px;
+      padding: 5px;
+    }
+    .thumb{
+      height: 285px;
+    }
+  }
+  */
+  /*.content-half{
+    display: block;
+    width: 100%;
+    img{
+      display: none;
+    }
+    p:last-child{
+      text-align: center;
+      font-size: 20px;
+      color: $colorThree;
+      font-weight: bold;
+    }
+  }
+  */ }
   .container .container-top {
     position: relative;
     height: 150px; }
@@ -287,6 +275,175 @@ html {
         color: black;
         text-align: center;
         border: 3px solid black; }
+  .container .section-content {
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    float: left;
+    margin-left: 8.5%;
+    width: 83%; }
+  .container .section-content-wide {
+    width: 100%; }
+  .container .content-text {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%; }
+    .container .content-text h2 {
+      font-weight: 400;
+      text-align: left; }
+    .container .content-text h3 {
+      text-align: center; }
+    .container .content-text p strong {
+      font-size: 44px; }
+    .container .content-text p:last-child {
+      margin-bottom: 40px; }
+    .container .content-text .white-text {
+      color: white; }
+    .container .content-text .about-btn-container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 25px 0;
+      margin-bottom: 30px; }
+      .container .content-text .about-btn-container #hideBio, .container .content-text .about-btn-container #showBio {
+        margin-right: 15px; }
+      .container .content-text .about-btn-container .aboutBtn {
+        width: 240px;
+        display: inline-block;
+        background: none;
+        color: #fff;
+        font-size: 32px;
+        font-family: 'Amatic SC', cursive;
+        height: 50%;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: 3px solid #fff;
+        border-radius: 2px;
+        transition: all .3s ease; }
+      .container .content-text .about-btn-container .aboutBtn:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.2); }
+      .container .content-text .about-btn-container #hideBio {
+        display: none; }
+    .container .content-text .full-bio {
+      display: none; }
+    .container .content-text .show-bio {
+      display: block;
+      padding-bottom: 40px; }
+  .container .content-interests div {
+    display: inline-block;
+    vertical-align: middle; }
+  .container .content-interests .interests-pic {
+    margin-left: 5%;
+    width: 28%; }
+    .container .content-interests .interests-pic img {
+      max-height: 200px;
+      max-width: 200px; }
+  .container .content-interests .interests-desc {
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 60%;
+    margin-left: 5%; }
+    .container .content-interests .interests-desc p strong {
+      font-size: 22px; }
+    .container .content-interests .interests-desc p b {
+      color: #2A9D8F; }
+  .container .content-divided {
+    position: relative;
+    width: 100%; }
+    .container .content-divided > div {
+      display: inline-block;
+      vertical-align: top;
+      width: 33%;
+      height: 285px;
+      padding: 5px; }
+  .container .content-half {
+    width: 49.5%;
+    display: inline-block;
+    vertical-align: middle; }
+    .container .content-half .content-half-image {
+      background: url("../images/florida-palms.jpg") no-repeat center center;
+      background-size: cover;
+      border: 3px solid white;
+      box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
+      height: 180px;
+      width: 100%; }
+    .container .content-half img {
+      display: block;
+      padding: 0 10% 0 10%; }
+    .container .content-half p {
+      margin: 0 0 0 25px;
+      font-size: 16px;
+      line-height: 26px; }
+    .container .content-half h4 {
+      text-align: center; }
+    .container .content-half .white-text {
+      color: white; }
+  .container .content-university {
+    background-color: #fff;
+    padding: 10px 0 5px 0;
+    border: 2px solid black; }
+    .container .content-university .university-left {
+      margin: 0 3% 0 11%;
+      width: 19%;
+      display: inline-block; }
+    .container .content-university .university-right {
+      width: 60%;
+      margin-left: 6%;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      padding-top: 10px; }
+      .container .content-university .university-right h3 {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        text-align: left;
+        font-size: 26px; }
+      .container .content-university .university-right p {
+        margin: 0;
+        margin-left: 25px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 31px; }
+        .container .content-university .university-right p strong {
+          font-style: italic;
+          font-size: 14px; }
+  @media screen and (min-width: 480px) and (max-width: 800px) {
+    .container .section-content .content-university {
+      background-color: #fff;
+      padding: 10px 0 5px 0;
+      border: 2px solid black; }
+      .container .section-content .content-university .university-left {
+        margin: 0 3% 0 11%;
+        width: 19%;
+        display: none; }
+      .container .section-content .content-university .university-right {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10px; }
+        .container .section-content .content-university .university-right h3 {
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 300;
+          text-align: center;
+          font-size: 26px; }
+        .container .section-content .content-university .university-right p {
+          margin: 0;
+          margin-left: 25px;
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 31px; }
+          .container .section-content .content-university .university-right p strong {
+            font-style: italic;
+            font-size: 14px; } }
+  .container .skills li {
+    margin-left: 15%; }
+  .container .skills li:hover {
+    background: #2A9D8F;
+    color: white;
+    padding-left: 7px; }
   .container .nav-bar-container {
     display: block;
     width: 100%; }
@@ -625,33 +782,7 @@ html {
     .container .home-container {
       min-height: 650px; }
       .container .home-container .home-top {
-        height: 300px;
-        /*
-        .home-logo{
-          margin-left: 10%;
-          position: absolute;
-          display: block;
-          height: 75%;
-          width: 35%;
-          a{
-            height: 100%;
-            width: 100%;
-            display: block;
-            padding-bottom: 15%;
-            padding-top: 2%;
-            border-right: 2px solid white;
-            border-left: 2px solid white;
-            border-bottom: 2px solid white;
-            background-color: rgba(0,0,0,.6);
-            transform: skew(-15deg);
-            box-shadow: inset 1px 1px 3px rgba(255,255,255,.3),
-            1px 1px 2px rgba(255,255,255,.2),
-            40px 35px 70px -10px rgba(255,255,255,.5);
-            img{
-              transform: skew(15deg);
-            }
-          }
-        }*/ }
+        height: 300px; }
       .container .home-container .home-middle .home-middle-header {
         padding-top: 50px; }
       .container .home-container .home-middle .scroll-button {
@@ -673,257 +804,60 @@ html {
   .container .bg-about1 {
     background: url("../images/pic1.jpg") no-repeat fixed center center;
     background-size: cover; }
+  .container .background-wrapper {
+    height: 100%;
+    width: 100%; }
+  .container .bg-one {
+    background-color: #E9C46A; }
+  .container .bg-two {
+    background-color: rgba(255, 255, 255, 0.8); }
+  .container .bg-three {
+    background-color: #2A9D8F; }
+  .container .bg-four {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAHElEQVQIW2N8fTjTmAEHYARJitpOP4tNftBJAgDvsxpSdI0OzQAAAABJRU5ErkJggg==") repeat; }
+  .container .bg-five {
+    background: url("../images/lil_fiber.png") repeat; }
+  .container .bg-white-opac {
+    background-color: rgba(255, 255, 255, 0.8); }
+  .container .bg-gradient {
+    background: linear-gradient(181deg, #E9C46A, white, #E9C46A);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 12s ease infinite;
+    -moz-animation: AnimationName 12s ease infinite;
+    -o-animation: AnimationName 12s ease infinite;
+    animation: AnimationName 12s ease infinite; }
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 87% 0%; }
+  50% {
+    background-position: 14% 100%; }
+  100% {
+    background-position: 87% 0%; } }
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 87% 0%; }
+  50% {
+    background-position: 14% 100%; }
+  100% {
+    background-position: 87% 0%; } }
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 87% 0%; }
+  50% {
+    background-position: 14% 100%; }
+  100% {
+    background-position: 87% 0%; } }
+@keyframes AnimationName {
+  0% {
+    background-position: 87% 0%; }
+  50% {
+    background-position: 14% 100%; }
+  100% {
+    background-position: 87% 0%; } }
   .container .about-container {
     position: relative; }
     .container .about-container .about-container-section {
-      position: relative;
-      /*
-      .content-live{
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-        background: url("../images/boynton1.png") no-repeat center center;
-        background-size: contain;
-        height: 200px;
-      }
-      */ }
-      .container .about-container .about-container-section .section-content {
-        padding-left: 25px;
-        padding-right: 25px; }
-      .container .about-container .about-container-section .content-text {
-        position: relative;
-        padding-top: 20px;
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%; }
-        .container .about-container .about-container-section .content-text h2 {
-          font-weight: 400;
-          text-align: left; }
-        .container .about-container .about-container-section .content-text h3 {
-          text-align: center; }
-        .container .about-container .about-container-section .content-text p strong {
-          font-size: 22px; }
-        .container .about-container .about-container-section .content-text p:last-child {
-          margin-bottom: 40px; }
-        .container .about-container .about-container-section .content-text .white-text {
-          color: white; }
-        .container .about-container .about-container-section .content-text .about-btn-container {
-          width: 500px;
-          margin: 0 auto;
-          padding: 25px 0;
-          margin-bottom: 30px; }
-          .container .about-container .about-container-section .content-text .about-btn-container #hideBio, .container .about-container .about-container-section .content-text .about-btn-container #showBio {
-            margin-right: 15px; }
-          .container .about-container .about-container-section .content-text .about-btn-container .aboutBtn {
-            width: 240px;
-            display: inline-block;
-            background: none;
-            color: #fff;
-            font-size: 32px;
-            font-family: 'Amatic SC', cursive;
-            height: 50%;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            border: 3px solid #fff;
-            border-radius: 2px;
-            transition: all .3s ease; }
-          .container .about-container .about-container-section .content-text .about-btn-container .aboutBtn:hover {
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.2); }
-          .container .about-container .about-container-section .content-text .about-btn-container #hideBio {
-            display: none; }
-        .container .about-container .about-container-section .content-text .full-bio {
-          display: none; }
-        .container .about-container .about-container-section .content-text .show-bio {
-          display: block;
-          padding-bottom: 40px; }
-      .container .about-container .about-container-section .content-interests div {
-        display: block; }
-      .container .about-container .about-container-section .content-interests .interests-pic {
-        display: none; }
-      .container .about-container .about-container-section .content-interests .interests-desc {
-        padding-left: 4%;
-        padding-right: 4%; }
-        .container .about-container .about-container-section .content-interests .interests-desc p strong {
-          font-size: 22px; }
-      .container .about-container .about-container-section .content-divided {
-        position: relative;
-        width: 100%; }
-        .container .about-container .about-container-section .content-divided > div {
-          display: block;
-          padding: 5px; }
-        .container .about-container .about-container-section .content-divided .thumb {
-          height: 285px; }
-      .container .about-container .about-container-section .content-half {
-        display: block;
-        width: 100%; }
-        .container .about-container .about-container-section .content-half img {
-          display: none; }
-        .container .about-container .about-container-section .content-half p:last-child {
-          text-align: center;
-          font-size: 20px;
-          color: #2A9D8F;
-          font-weight: bold; }
-      @media screen and (min-width: 800px) {
-        .container .about-container .about-container-section .section-content {
-          position: relative;
-          float: left;
-          margin-left: 8.5%;
-          width: 83%; }
-          .container .about-container .about-container-section .section-content .content-text p strong {
-            font-size: 44px; }
-          .container .about-container .about-container-section .section-content .content-interests div {
-            display: inline-block;
-            vertical-align: middle; }
-          .container .about-container .about-container-section .section-content .content-interests .interests-pic {
-            margin-left: 5%;
-            width: 28%; }
-            .container .about-container .about-container-section .section-content .content-interests .interests-pic img {
-              max-height: 200px;
-              max-width: 200px; }
-          .container .about-container .about-container-section .section-content .content-interests .interests-desc {
-            width: 60%;
-            margin-left: 5%; }
-            .container .about-container .about-container-section .section-content .content-interests .interests-desc p strong {
-              font-size: 22px; }
-            .container .about-container .about-container-section .section-content .content-interests .interests-desc p b {
-              color: #2A9D8F; }
-          .container .about-container .about-container-section .section-content .content-half {
-            width: 49.5%;
-            display: inline-block;
-            vertical-align: middle; }
-            .container .about-container .about-container-section .section-content .content-half .content-half-image {
-              background: url("../images/florida-palms.jpg") no-repeat center center;
-              background-size: cover;
-              border: 3px solid white;
-              box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
-              height: 180px;
-              width: 100%; }
-            .container .about-container .about-container-section .section-content .content-half img {
-              display: block;
-              padding: 0 10% 0 10%; }
-            .container .about-container .about-container-section .section-content .content-half p {
-              margin: 0 0 0 25px;
-              font-size: 16px;
-              line-height: 26px; }
-            .container .about-container .about-container-section .section-content .content-half h4 {
-              text-align: center; }
-            .container .about-container .about-container-section .section-content .content-half .white-text {
-              color: white; }
-          .container .about-container .about-container-section .section-content .content-university {
-            background-color: #fff;
-            padding: 10px 0 5px 0;
-            border: 2px solid black; }
-            .container .about-container .about-container-section .section-content .content-university .university-left {
-              margin: 0 3% 0 11%;
-              width: 19%;
-              display: inline-block; }
-            .container .about-container .about-container-section .section-content .content-university .university-right {
-              width: 60%;
-              margin-left: 6%;
-              display: inline-block;
-              vertical-align: top;
-              text-align: left;
-              padding-top: 10px; }
-              .container .about-container .about-container-section .section-content .content-university .university-right h3 {
-                font-family: 'Josefin Sans', sans-serif;
-                font-weight: 300;
-                text-align: left;
-                font-size: 26px; }
-              .container .about-container .about-container-section .section-content .content-university .university-right p {
-                margin: 0;
-                margin-left: 25px;
-                font-family: 'Josefin Sans', sans-serif;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 31px; }
-                .container .about-container .about-container-section .section-content .content-university .university-right p strong {
-                  font-style: italic;
-                  font-size: 14px; }
-          .container .about-container .about-container-section .section-content .content-divided {
-            position: relative;
-            width: 100%; }
-            .container .about-container .about-container-section .section-content .content-divided > div {
-              display: inline-block;
-              vertical-align: top;
-              width: 33%;
-              height: 285px;
-              padding: 5px; }
-        .container .about-container .about-container-section .section-content-wide {
-          width: 100%; } }
-      @media screen and (min-width: 480px) and (max-width: 800px) {
-        .container .about-container .about-container-section .section-content .content-university {
-          background-color: #fff;
-          padding: 10px 0 5px 0;
-          border: 2px solid black; }
-          .container .about-container .about-container-section .section-content .content-university .university-left {
-            margin: 0 3% 0 11%;
-            width: 19%;
-            display: none; }
-          .container .about-container .about-container-section .section-content .content-university .university-right {
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 10px; }
-            .container .about-container .about-container-section .section-content .content-university .university-right h3 {
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              text-align: center;
-              font-size: 26px; }
-            .container .about-container .about-container-section .section-content .content-university .university-right p {
-              margin: 0;
-              margin-left: 25px;
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              font-size: 20px;
-              line-height: 31px; }
-              .container .about-container .about-container-section .section-content .content-university .university-right p strong {
-                font-style: italic;
-                font-size: 14px; } }
-      .container .about-container .about-container-section .skills li {
-        margin-left: 15%; }
-      .container .about-container .about-container-section .skills li:hover {
-        background: #2A9D8F;
-        color: white;
-        padding-left: 7px; }
-      .container .about-container .about-container-section .content-contact {
-        width: 100%;
-        min-height: 400px;
-        padding-top: 50px;
-        padding-bottom: 25px; }
-        .container .about-container .about-container-section .content-contact a {
-          padding: 25px;
-          display: block;
-          margin: 0 auto;
-          width: 200px;
-          height: 200px; }
-        .container .about-container .about-container-section .content-contact h2 {
-          color: white;
-          text-align: center; }
-        .container .about-container .about-container-section .content-contact h2:last-child {
-          padding-top: 4px; }
-        .container .about-container .about-container-section .content-contact p {
-          color: white;
-          margin: 0 auto;
-          text-align: center; }
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.05); }
-  100% {
-    -webkit-transform: scale(1); } }
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.05); }
-  100% {
-    transform: scale(1); } }
-      .container .about-container .about-container-section .pulse {
-        -webkit-animation-name: pulse;
-        animation-name: pulse;
-        animation-duration: 1s;
-        animation-iteration-count: infinite; }
+      position: relative; }
   .container .polaroids {
     display: none; }
   @media screen and (min-width: 480px) {
@@ -1075,254 +1009,7 @@ html {
     width: 100%;
     position: relative; }
     .container .portfolio-container .portfolio-container-section {
-      position: relative;
-      /*
-      .content-live{
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-        background: url("../images/boynton1.png") no-repeat center center;
-        background-size: contain;
-        height: 200px;
-      }
-      */ }
-      .container .portfolio-container .portfolio-container-section .section-content {
-        padding-left: 25px;
-        padding-right: 25px; }
-      .container .portfolio-container .portfolio-container-section .content-text {
-        position: relative;
-        padding-top: 20px;
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%; }
-        .container .portfolio-container .portfolio-container-section .content-text h2 {
-          font-weight: 400;
-          text-align: left; }
-        .container .portfolio-container .portfolio-container-section .content-text h3 {
-          text-align: center; }
-        .container .portfolio-container .portfolio-container-section .content-text p strong {
-          font-size: 22px; }
-        .container .portfolio-container .portfolio-container-section .content-text p:last-child {
-          margin-bottom: 40px; }
-        .container .portfolio-container .portfolio-container-section .content-text .white-text {
-          color: white; }
-        .container .portfolio-container .portfolio-container-section .content-text .about-btn-container {
-          width: 500px;
-          margin: 0 auto;
-          padding: 25px 0;
-          margin-bottom: 30px; }
-          .container .portfolio-container .portfolio-container-section .content-text .about-btn-container #hideBio, .container .portfolio-container .portfolio-container-section .content-text .about-btn-container #showBio {
-            margin-right: 15px; }
-          .container .portfolio-container .portfolio-container-section .content-text .about-btn-container .aboutBtn {
-            width: 240px;
-            display: inline-block;
-            background: none;
-            color: #fff;
-            font-size: 32px;
-            font-family: 'Amatic SC', cursive;
-            height: 50%;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            border: 3px solid #fff;
-            border-radius: 2px;
-            transition: all .3s ease; }
-          .container .portfolio-container .portfolio-container-section .content-text .about-btn-container .aboutBtn:hover {
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.2); }
-          .container .portfolio-container .portfolio-container-section .content-text .about-btn-container #hideBio {
-            display: none; }
-        .container .portfolio-container .portfolio-container-section .content-text .full-bio {
-          display: none; }
-        .container .portfolio-container .portfolio-container-section .content-text .show-bio {
-          display: block;
-          padding-bottom: 40px; }
-      .container .portfolio-container .portfolio-container-section .content-interests div {
-        display: block; }
-      .container .portfolio-container .portfolio-container-section .content-interests .interests-pic {
-        display: none; }
-      .container .portfolio-container .portfolio-container-section .content-interests .interests-desc {
-        padding-left: 4%;
-        padding-right: 4%; }
-        .container .portfolio-container .portfolio-container-section .content-interests .interests-desc p strong {
-          font-size: 22px; }
-      .container .portfolio-container .portfolio-container-section .content-divided {
-        position: relative;
-        width: 100%; }
-        .container .portfolio-container .portfolio-container-section .content-divided > div {
-          display: block;
-          padding: 5px; }
-        .container .portfolio-container .portfolio-container-section .content-divided .thumb {
-          height: 285px; }
-      .container .portfolio-container .portfolio-container-section .content-half {
-        display: block;
-        width: 100%; }
-        .container .portfolio-container .portfolio-container-section .content-half img {
-          display: none; }
-        .container .portfolio-container .portfolio-container-section .content-half p:last-child {
-          text-align: center;
-          font-size: 20px;
-          color: #2A9D8F;
-          font-weight: bold; }
-      @media screen and (min-width: 800px) {
-        .container .portfolio-container .portfolio-container-section .section-content {
-          position: relative;
-          float: left;
-          margin-left: 8.5%;
-          width: 83%; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-text p strong {
-            font-size: 44px; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-interests div {
-            display: inline-block;
-            vertical-align: middle; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-interests .interests-pic {
-            margin-left: 5%;
-            width: 28%; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-interests .interests-pic img {
-              max-height: 200px;
-              max-width: 200px; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-interests .interests-desc {
-            width: 60%;
-            margin-left: 5%; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-interests .interests-desc p strong {
-              font-size: 22px; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-interests .interests-desc p b {
-              color: #2A9D8F; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-half {
-            width: 49.5%;
-            display: inline-block;
-            vertical-align: middle; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-half .content-half-image {
-              background: url("../images/florida-palms.jpg") no-repeat center center;
-              background-size: cover;
-              border: 3px solid white;
-              box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
-              height: 180px;
-              width: 100%; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-half img {
-              display: block;
-              padding: 0 10% 0 10%; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-half p {
-              margin: 0 0 0 25px;
-              font-size: 16px;
-              line-height: 26px; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-half h4 {
-              text-align: center; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-half .white-text {
-              color: white; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-university {
-            background-color: #fff;
-            padding: 10px 0 5px 0;
-            border: 2px solid black; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-university .university-left {
-              margin: 0 3% 0 11%;
-              width: 19%;
-              display: inline-block; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right {
-              width: 60%;
-              margin-left: 6%;
-              display: inline-block;
-              vertical-align: top;
-              text-align: left;
-              padding-top: 10px; }
-              .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right h3 {
-                font-family: 'Josefin Sans', sans-serif;
-                font-weight: 300;
-                text-align: left;
-                font-size: 26px; }
-              .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right p {
-                margin: 0;
-                margin-left: 25px;
-                font-family: 'Josefin Sans', sans-serif;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 31px; }
-                .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right p strong {
-                  font-style: italic;
-                  font-size: 14px; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-divided {
-            position: relative;
-            width: 100%; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-divided > div {
-              display: inline-block;
-              vertical-align: top;
-              width: 33%;
-              height: 285px;
-              padding: 5px; }
-        .container .portfolio-container .portfolio-container-section .section-content-wide {
-          width: 100%; } }
-      @media screen and (min-width: 480px) and (max-width: 800px) {
-        .container .portfolio-container .portfolio-container-section .section-content .content-university {
-          background-color: #fff;
-          padding: 10px 0 5px 0;
-          border: 2px solid black; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-university .university-left {
-            margin: 0 3% 0 11%;
-            width: 19%;
-            display: none; }
-          .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right {
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 10px; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right h3 {
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              text-align: center;
-              font-size: 26px; }
-            .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right p {
-              margin: 0;
-              margin-left: 25px;
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              font-size: 20px;
-              line-height: 31px; }
-              .container .portfolio-container .portfolio-container-section .section-content .content-university .university-right p strong {
-                font-style: italic;
-                font-size: 14px; } }
-      .container .portfolio-container .portfolio-container-section .skills li {
-        margin-left: 15%; }
-      .container .portfolio-container .portfolio-container-section .skills li:hover {
-        background: #2A9D8F;
-        color: white;
-        padding-left: 7px; }
-      .container .portfolio-container .portfolio-container-section .content-contact {
-        width: 100%;
-        min-height: 400px;
-        padding-top: 50px;
-        padding-bottom: 25px; }
-        .container .portfolio-container .portfolio-container-section .content-contact a {
-          padding: 25px;
-          display: block;
-          margin: 0 auto;
-          width: 200px;
-          height: 200px; }
-        .container .portfolio-container .portfolio-container-section .content-contact h2 {
-          color: white;
-          text-align: center; }
-        .container .portfolio-container .portfolio-container-section .content-contact h2:last-child {
-          padding-top: 4px; }
-        .container .portfolio-container .portfolio-container-section .content-contact p {
-          color: white;
-          margin: 0 auto;
-          text-align: center; }
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.05); }
-  100% {
-    -webkit-transform: scale(1); } }
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.05); }
-  100% {
-    transform: scale(1); } }
-      .container .portfolio-container .portfolio-container-section .pulse {
-        -webkit-animation-name: pulse;
-        animation-name: pulse;
-        animation-duration: 1s;
-        animation-iteration-count: infinite; }
+      position: relative; }
       .container .portfolio-container .portfolio-container-section .portfolio-work-container {
         height: 100%;
         width: 100%; }
@@ -1389,215 +1076,7 @@ html {
     width: 100%;
     position: relative; }
     .container .contact-container .contact-container-section {
-      position: relative;
-      /*
-      .content-live{
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-        background: url("../images/boynton1.png") no-repeat center center;
-        background-size: contain;
-        height: 200px;
-      }
-      */ }
-      .container .contact-container .contact-container-section .section-content {
-        padding-left: 25px;
-        padding-right: 25px; }
-      .container .contact-container .contact-container-section .content-text {
-        position: relative;
-        padding-top: 20px;
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%; }
-        .container .contact-container .contact-container-section .content-text h2 {
-          font-weight: 400;
-          text-align: left; }
-        .container .contact-container .contact-container-section .content-text h3 {
-          text-align: center; }
-        .container .contact-container .contact-container-section .content-text p strong {
-          font-size: 22px; }
-        .container .contact-container .contact-container-section .content-text p:last-child {
-          margin-bottom: 40px; }
-        .container .contact-container .contact-container-section .content-text .white-text {
-          color: white; }
-        .container .contact-container .contact-container-section .content-text .about-btn-container {
-          width: 500px;
-          margin: 0 auto;
-          padding: 25px 0;
-          margin-bottom: 30px; }
-          .container .contact-container .contact-container-section .content-text .about-btn-container #hideBio, .container .contact-container .contact-container-section .content-text .about-btn-container #showBio {
-            margin-right: 15px; }
-          .container .contact-container .contact-container-section .content-text .about-btn-container .aboutBtn {
-            width: 240px;
-            display: inline-block;
-            background: none;
-            color: #fff;
-            font-size: 32px;
-            font-family: 'Amatic SC', cursive;
-            height: 50%;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            border: 3px solid #fff;
-            border-radius: 2px;
-            transition: all .3s ease; }
-          .container .contact-container .contact-container-section .content-text .about-btn-container .aboutBtn:hover {
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.2); }
-          .container .contact-container .contact-container-section .content-text .about-btn-container #hideBio {
-            display: none; }
-        .container .contact-container .contact-container-section .content-text .full-bio {
-          display: none; }
-        .container .contact-container .contact-container-section .content-text .show-bio {
-          display: block;
-          padding-bottom: 40px; }
-      .container .contact-container .contact-container-section .content-interests div {
-        display: block; }
-      .container .contact-container .contact-container-section .content-interests .interests-pic {
-        display: none; }
-      .container .contact-container .contact-container-section .content-interests .interests-desc {
-        padding-left: 4%;
-        padding-right: 4%; }
-        .container .contact-container .contact-container-section .content-interests .interests-desc p strong {
-          font-size: 22px; }
-      .container .contact-container .contact-container-section .content-divided {
-        position: relative;
-        width: 100%; }
-        .container .contact-container .contact-container-section .content-divided > div {
-          display: block;
-          padding: 5px; }
-        .container .contact-container .contact-container-section .content-divided .thumb {
-          height: 285px; }
-      .container .contact-container .contact-container-section .content-half {
-        display: block;
-        width: 100%; }
-        .container .contact-container .contact-container-section .content-half img {
-          display: none; }
-        .container .contact-container .contact-container-section .content-half p:last-child {
-          text-align: center;
-          font-size: 20px;
-          color: #2A9D8F;
-          font-weight: bold; }
-      @media screen and (min-width: 800px) {
-        .container .contact-container .contact-container-section .section-content {
-          position: relative;
-          float: left;
-          margin-left: 8.5%;
-          width: 83%; }
-          .container .contact-container .contact-container-section .section-content .content-text p strong {
-            font-size: 44px; }
-          .container .contact-container .contact-container-section .section-content .content-interests div {
-            display: inline-block;
-            vertical-align: middle; }
-          .container .contact-container .contact-container-section .section-content .content-interests .interests-pic {
-            margin-left: 5%;
-            width: 28%; }
-            .container .contact-container .contact-container-section .section-content .content-interests .interests-pic img {
-              max-height: 200px;
-              max-width: 200px; }
-          .container .contact-container .contact-container-section .section-content .content-interests .interests-desc {
-            width: 60%;
-            margin-left: 5%; }
-            .container .contact-container .contact-container-section .section-content .content-interests .interests-desc p strong {
-              font-size: 22px; }
-            .container .contact-container .contact-container-section .section-content .content-interests .interests-desc p b {
-              color: #2A9D8F; }
-          .container .contact-container .contact-container-section .section-content .content-half {
-            width: 49.5%;
-            display: inline-block;
-            vertical-align: middle; }
-            .container .contact-container .contact-container-section .section-content .content-half .content-half-image {
-              background: url("../images/florida-palms.jpg") no-repeat center center;
-              background-size: cover;
-              border: 3px solid white;
-              box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
-              height: 180px;
-              width: 100%; }
-            .container .contact-container .contact-container-section .section-content .content-half img {
-              display: block;
-              padding: 0 10% 0 10%; }
-            .container .contact-container .contact-container-section .section-content .content-half p {
-              margin: 0 0 0 25px;
-              font-size: 16px;
-              line-height: 26px; }
-            .container .contact-container .contact-container-section .section-content .content-half h4 {
-              text-align: center; }
-            .container .contact-container .contact-container-section .section-content .content-half .white-text {
-              color: white; }
-          .container .contact-container .contact-container-section .section-content .content-university {
-            background-color: #fff;
-            padding: 10px 0 5px 0;
-            border: 2px solid black; }
-            .container .contact-container .contact-container-section .section-content .content-university .university-left {
-              margin: 0 3% 0 11%;
-              width: 19%;
-              display: inline-block; }
-            .container .contact-container .contact-container-section .section-content .content-university .university-right {
-              width: 60%;
-              margin-left: 6%;
-              display: inline-block;
-              vertical-align: top;
-              text-align: left;
-              padding-top: 10px; }
-              .container .contact-container .contact-container-section .section-content .content-university .university-right h3 {
-                font-family: 'Josefin Sans', sans-serif;
-                font-weight: 300;
-                text-align: left;
-                font-size: 26px; }
-              .container .contact-container .contact-container-section .section-content .content-university .university-right p {
-                margin: 0;
-                margin-left: 25px;
-                font-family: 'Josefin Sans', sans-serif;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 31px; }
-                .container .contact-container .contact-container-section .section-content .content-university .university-right p strong {
-                  font-style: italic;
-                  font-size: 14px; }
-          .container .contact-container .contact-container-section .section-content .content-divided {
-            position: relative;
-            width: 100%; }
-            .container .contact-container .contact-container-section .section-content .content-divided > div {
-              display: inline-block;
-              vertical-align: top;
-              width: 33%;
-              height: 285px;
-              padding: 5px; }
-        .container .contact-container .contact-container-section .section-content-wide {
-          width: 100%; } }
-      @media screen and (min-width: 480px) and (max-width: 800px) {
-        .container .contact-container .contact-container-section .section-content .content-university {
-          background-color: #fff;
-          padding: 10px 0 5px 0;
-          border: 2px solid black; }
-          .container .contact-container .contact-container-section .section-content .content-university .university-left {
-            margin: 0 3% 0 11%;
-            width: 19%;
-            display: none; }
-          .container .contact-container .contact-container-section .section-content .content-university .university-right {
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 10px; }
-            .container .contact-container .contact-container-section .section-content .content-university .university-right h3 {
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              text-align: center;
-              font-size: 26px; }
-            .container .contact-container .contact-container-section .section-content .content-university .university-right p {
-              margin: 0;
-              margin-left: 25px;
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              font-size: 20px;
-              line-height: 31px; }
-              .container .contact-container .contact-container-section .section-content .content-university .university-right p strong {
-                font-style: italic;
-                font-size: 14px; } }
-      .container .contact-container .contact-container-section .skills li {
-        margin-left: 15%; }
-      .container .contact-container .contact-container-section .skills li:hover {
-        background: #2A9D8F;
-        color: white;
-        padding-left: 7px; }
+      position: relative; }
       .container .contact-container .contact-container-section .content-contact {
         width: 100%;
         min-height: 400px;
@@ -1618,25 +1097,6 @@ html {
           color: white;
           margin: 0 auto;
           text-align: center; }
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.05); }
-  100% {
-    -webkit-transform: scale(1); } }
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.05); }
-  100% {
-    transform: scale(1); } }
-      .container .contact-container .contact-container-section .pulse {
-        -webkit-animation-name: pulse;
-        animation-name: pulse;
-        animation-duration: 1s;
-        animation-iteration-count: infinite; }
 
 @media screen and (min-device-width: 480px) {
   .nav-top,
@@ -1718,255 +1178,7 @@ html {
     position: relative; }
     .container .resources-container .resources-container-section {
       position: relative;
-      padding-top: 20px;
-      /*
-      .content-live{
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-        background: url("../images/boynton1.png") no-repeat center center;
-        background-size: contain;
-        height: 200px;
-      }
-      */ }
-      .container .resources-container .resources-container-section .section-content {
-        padding-left: 25px;
-        padding-right: 25px; }
-      .container .resources-container .resources-container-section .content-text {
-        position: relative;
-        padding-top: 20px;
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%; }
-        .container .resources-container .resources-container-section .content-text h2 {
-          font-weight: 400;
-          text-align: left; }
-        .container .resources-container .resources-container-section .content-text h3 {
-          text-align: center; }
-        .container .resources-container .resources-container-section .content-text p strong {
-          font-size: 22px; }
-        .container .resources-container .resources-container-section .content-text p:last-child {
-          margin-bottom: 40px; }
-        .container .resources-container .resources-container-section .content-text .white-text {
-          color: white; }
-        .container .resources-container .resources-container-section .content-text .about-btn-container {
-          width: 500px;
-          margin: 0 auto;
-          padding: 25px 0;
-          margin-bottom: 30px; }
-          .container .resources-container .resources-container-section .content-text .about-btn-container #hideBio, .container .resources-container .resources-container-section .content-text .about-btn-container #showBio {
-            margin-right: 15px; }
-          .container .resources-container .resources-container-section .content-text .about-btn-container .aboutBtn {
-            width: 240px;
-            display: inline-block;
-            background: none;
-            color: #fff;
-            font-size: 32px;
-            font-family: 'Amatic SC', cursive;
-            height: 50%;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            border: 3px solid #fff;
-            border-radius: 2px;
-            transition: all .3s ease; }
-          .container .resources-container .resources-container-section .content-text .about-btn-container .aboutBtn:hover {
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.2); }
-          .container .resources-container .resources-container-section .content-text .about-btn-container #hideBio {
-            display: none; }
-        .container .resources-container .resources-container-section .content-text .full-bio {
-          display: none; }
-        .container .resources-container .resources-container-section .content-text .show-bio {
-          display: block;
-          padding-bottom: 40px; }
-      .container .resources-container .resources-container-section .content-interests div {
-        display: block; }
-      .container .resources-container .resources-container-section .content-interests .interests-pic {
-        display: none; }
-      .container .resources-container .resources-container-section .content-interests .interests-desc {
-        padding-left: 4%;
-        padding-right: 4%; }
-        .container .resources-container .resources-container-section .content-interests .interests-desc p strong {
-          font-size: 22px; }
-      .container .resources-container .resources-container-section .content-divided {
-        position: relative;
-        width: 100%; }
-        .container .resources-container .resources-container-section .content-divided > div {
-          display: block;
-          padding: 5px; }
-        .container .resources-container .resources-container-section .content-divided .thumb {
-          height: 285px; }
-      .container .resources-container .resources-container-section .content-half {
-        display: block;
-        width: 100%; }
-        .container .resources-container .resources-container-section .content-half img {
-          display: none; }
-        .container .resources-container .resources-container-section .content-half p:last-child {
-          text-align: center;
-          font-size: 20px;
-          color: #2A9D8F;
-          font-weight: bold; } }
-    @media screen and (min-device-width: 480px) and (min-width: 800px) {
-      .container .resources-container .resources-container-section .section-content {
-        position: relative;
-        float: left;
-        margin-left: 8.5%;
-        width: 83%; }
-        .container .resources-container .resources-container-section .section-content .content-text p strong {
-          font-size: 44px; }
-        .container .resources-container .resources-container-section .section-content .content-interests div {
-          display: inline-block;
-          vertical-align: middle; }
-        .container .resources-container .resources-container-section .section-content .content-interests .interests-pic {
-          margin-left: 5%;
-          width: 28%; }
-          .container .resources-container .resources-container-section .section-content .content-interests .interests-pic img {
-            max-height: 200px;
-            max-width: 200px; }
-        .container .resources-container .resources-container-section .section-content .content-interests .interests-desc {
-          width: 60%;
-          margin-left: 5%; }
-          .container .resources-container .resources-container-section .section-content .content-interests .interests-desc p strong {
-            font-size: 22px; }
-          .container .resources-container .resources-container-section .section-content .content-interests .interests-desc p b {
-            color: #2A9D8F; }
-        .container .resources-container .resources-container-section .section-content .content-half {
-          width: 49.5%;
-          display: inline-block;
-          vertical-align: middle; }
-          .container .resources-container .resources-container-section .section-content .content-half .content-half-image {
-            background: url("../images/florida-palms.jpg") no-repeat center center;
-            background-size: cover;
-            border: 3px solid white;
-            box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
-            height: 180px;
-            width: 100%; }
-          .container .resources-container .resources-container-section .section-content .content-half img {
-            display: block;
-            padding: 0 10% 0 10%; }
-          .container .resources-container .resources-container-section .section-content .content-half p {
-            margin: 0 0 0 25px;
-            font-size: 16px;
-            line-height: 26px; }
-          .container .resources-container .resources-container-section .section-content .content-half h4 {
-            text-align: center; }
-          .container .resources-container .resources-container-section .section-content .content-half .white-text {
-            color: white; }
-        .container .resources-container .resources-container-section .section-content .content-university {
-          background-color: #fff;
-          padding: 10px 0 5px 0;
-          border: 2px solid black; }
-          .container .resources-container .resources-container-section .section-content .content-university .university-left {
-            margin: 0 3% 0 11%;
-            width: 19%;
-            display: inline-block; }
-          .container .resources-container .resources-container-section .section-content .content-university .university-right {
-            width: 60%;
-            margin-left: 6%;
-            display: inline-block;
-            vertical-align: top;
-            text-align: left;
-            padding-top: 10px; }
-            .container .resources-container .resources-container-section .section-content .content-university .university-right h3 {
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              text-align: left;
-              font-size: 26px; }
-            .container .resources-container .resources-container-section .section-content .content-university .university-right p {
-              margin: 0;
-              margin-left: 25px;
-              font-family: 'Josefin Sans', sans-serif;
-              font-weight: 300;
-              font-size: 20px;
-              line-height: 31px; }
-              .container .resources-container .resources-container-section .section-content .content-university .university-right p strong {
-                font-style: italic;
-                font-size: 14px; }
-        .container .resources-container .resources-container-section .section-content .content-divided {
-          position: relative;
-          width: 100%; }
-          .container .resources-container .resources-container-section .section-content .content-divided > div {
-            display: inline-block;
-            vertical-align: top;
-            width: 33%;
-            height: 285px;
-            padding: 5px; }
-      .container .resources-container .resources-container-section .section-content-wide {
-        width: 100%; } }
-    @media screen and (min-device-width: 480px) and (min-width: 480px) and (max-width: 800px) {
-      .container .resources-container .resources-container-section .section-content .content-university {
-        background-color: #fff;
-        padding: 10px 0 5px 0;
-        border: 2px solid black; }
-        .container .resources-container .resources-container-section .section-content .content-university .university-left {
-          margin: 0 3% 0 11%;
-          width: 19%;
-          display: none; }
-        .container .resources-container .resources-container-section .section-content .content-university .university-right {
-          width: 100%;
-          margin: 0 auto;
-          text-align: center;
-          padding-top: 10px; }
-          .container .resources-container .resources-container-section .section-content .content-university .university-right h3 {
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: 300;
-            text-align: center;
-            font-size: 26px; }
-          .container .resources-container .resources-container-section .section-content .content-university .university-right p {
-            margin: 0;
-            margin-left: 25px;
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: 300;
-            font-size: 20px;
-            line-height: 31px; }
-            .container .resources-container .resources-container-section .section-content .content-university .university-right p strong {
-              font-style: italic;
-              font-size: 14px; } }
-@media screen and (min-device-width: 480px) {
-      .container .resources-container .resources-container-section .skills li {
-        margin-left: 15%; }
-      .container .resources-container .resources-container-section .skills li:hover {
-        background: #2A9D8F;
-        color: white;
-        padding-left: 7px; }
-      .container .resources-container .resources-container-section .content-contact {
-        width: 100%;
-        min-height: 400px;
-        padding-top: 50px;
-        padding-bottom: 25px; }
-        .container .resources-container .resources-container-section .content-contact a {
-          padding: 25px;
-          display: block;
-          margin: 0 auto;
-          width: 200px;
-          height: 200px; }
-        .container .resources-container .resources-container-section .content-contact h2 {
-          color: white;
-          text-align: center; }
-        .container .resources-container .resources-container-section .content-contact h2:last-child {
-          padding-top: 4px; }
-        .container .resources-container .resources-container-section .content-contact p {
-          color: white;
-          margin: 0 auto;
-          text-align: center; }
-  @-webkit-keyframes pulse {
-    0% {
-      -webkit-transform: scale(1); }
-    50% {
-      -webkit-transform: scale(1.05); }
-    100% {
-      -webkit-transform: scale(1); } }
-  @keyframes pulse {
-    0% {
-      transform: scale(1); }
-    50% {
-      transform: scale(1.05); }
-    100% {
-      transform: scale(1); } }
-      .container .resources-container .resources-container-section .pulse {
-        -webkit-animation-name: pulse;
-        animation-name: pulse;
-        animation-duration: 1s;
-        animation-iteration-count: infinite; }
+      padding-top: 20px; }
       .container .resources-container .resources-container-section ul {
         position: relative;
         margin: 0;

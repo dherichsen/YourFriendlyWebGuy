@@ -2,7 +2,7 @@
     background: url("../images/himalayas.jpg") no-repeat fixed center center;
     background-size: cover;
   }
-  .contact-background{
+ .contact-background{
     background: url("../images/florida-black.jpg") no-repeat fixed center bottom;
     background-size: cover;
   }
@@ -19,3 +19,61 @@
     background: url("../images/pic1.jpg") no-repeat fixed center center;
     background-size: cover;
   }
+
+ .background-wrapper{
+   height: 100%;
+   width: 100%;
+ }
+ .bg-one{
+   background-color: $colorTwo;
+ }
+ .bg-two{
+   //background-color: white;
+   background-color: rgba(255,255,255,.8);
+   //background-color: $colorThree;
+ }
+ .bg-three{
+   background-color: $colorThree;
+ }
+ .bg-four {
+   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAHElEQVQIW2N8fTjTmAEHYARJitpOP4tNftBJAgDvsxpSdI0OzQAAAABJRU5ErkJggg==") repeat;
+ }
+
+ .bg-five{
+   background: url("../images/lil_fiber.png") repeat;
+ }
+
+ .bg-white-opac{
+   background-color: rgba(255,255,255,0.8);
+ }
+
+ .bg-gradient{
+   background: linear-gradient(181deg, $colorTwo, white, $colorTwo);
+   background-size: 600% 600%;
+
+   -webkit-animation: AnimationName 12s ease infinite;
+   -moz-animation: AnimationName 12s ease infinite;
+   -o-animation: AnimationName 12s ease infinite;
+   animation: AnimationName 12s ease infinite;
+
+   @-webkit-keyframes AnimationName {
+     0%{background-position:87% 0%}
+     50%{background-position:14% 100%}
+     100%{background-position:87% 0%}
+   }
+   @-moz-keyframes AnimationName {
+     0%{background-position:87% 0%}
+     50%{background-position:14% 100%}
+     100%{background-position:87% 0%}
+   }
+   @-o-keyframes AnimationName {
+     0%{background-position:87% 0%}
+     50%{background-position:14% 100%}
+     100%{background-position:87% 0%}
+   }
+   @keyframes AnimationName {
+     0%{background-position:87% 0%}
+     50%{background-position:14% 100%}
+     100%{background-position:87% 0%}
+   }
+ }

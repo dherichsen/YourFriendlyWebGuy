@@ -2,10 +2,6 @@
   border-bottom: 5px solid black;
 }
 
-.black-background{
-  background: black;
-}
-
 .border-bottom-thin{
   color: black;
   border-bottom: 2px dotted black;
@@ -20,63 +16,6 @@
   width: 60%;
   border-bottom: 1px solid black;
   margin-bottom: 40px;
-}
-.background-wrapper{
-  height: 100%;
-  width: 100%;
-}
-.bg-one{
-  background-color: $colorTwo;
-}
-.bg-two{
-  //background-color: white;
-  background-color: rgba(255,255,255,.8);
-  //background-color: $colorThree;
-}
-.bg-three{
-  background-color: $colorThree;
-}
-.bg-four {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAHElEQVQIW2N8fTjTmAEHYARJitpOP4tNftBJAgDvsxpSdI0OzQAAAABJRU5ErkJggg==") repeat;
-}
-
-.bg-five{
-  background: url("../images/lil_fiber.png") repeat;
-}
-
-.bg-white-opac{
-  background-color: rgba(255,255,255,0.8);
-}
-
-.bg-gradient{
-  background: linear-gradient(181deg, $colorTwo, white, $colorTwo);
-  background-size: 600% 600%;
-
-  -webkit-animation: AnimationName 12s ease infinite;
-  -moz-animation: AnimationName 12s ease infinite;
-  -o-animation: AnimationName 12s ease infinite;
-  animation: AnimationName 12s ease infinite;
-
-  @-webkit-keyframes AnimationName {
-    0%{background-position:87% 0%}
-    50%{background-position:14% 100%}
-    100%{background-position:87% 0%}
-  }
-  @-moz-keyframes AnimationName {
-    0%{background-position:87% 0%}
-    50%{background-position:14% 100%}
-    100%{background-position:87% 0%}
-  }
-  @-o-keyframes AnimationName {
-    0%{background-position:87% 0%}
-    50%{background-position:14% 100%}
-    100%{background-position:87% 0%}
-  }
-  @keyframes AnimationName {
-    0%{background-position:87% 0%}
-    50%{background-position:14% 100%}
-    100%{background-position:87% 0%}
-  }
 }
 
 .work-break{
@@ -225,4 +164,21 @@
 
 .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+@-webkit-keyframes pulse {
+  0% { -webkit-transform: scale(1); }
+  50% { -webkit-transform: scale(1.05); }
+  100% { -webkit-transform: scale(1); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
