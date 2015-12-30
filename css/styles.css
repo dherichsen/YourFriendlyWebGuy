@@ -21,7 +21,7 @@ h2, h3, h4 {
 h1 {
   text-transform: uppercase;
   font-size: 36px;
-  line-height: 40px; }
+  line-height: 64px; }
 
 h2 {
   font-size: 18px;
@@ -668,13 +668,13 @@ html {
         filter: blur(15px);
         position: absolute;
         display: block;
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: 180px;
         margin: -10px 0 0 -10px; }
       .container .home-container .home-middle .home-middle-logo {
         border-radius: 50%;
-        height: 180px;
-        width: 180px;
+        height: 160px;
+        width: 160px;
         margin: 0 auto;
         z-index: 2; }
         .container .home-container .home-middle .home-middle-logo a {
@@ -710,7 +710,6 @@ html {
           text-align: center; }
         .container .home-container .home-bottom .home-bottom-header h2 {
           animation-delay: 1s;
-          font-size: 34px;
           font-weight: 300;
           color: white;
           text-align: center; }
@@ -773,7 +772,13 @@ html {
       height: 40vh; } }
   @media screen and (min-width: 480px) and (max-width: 800px) {
     .container .home-container {
-      min-height: 480px; } }
+      min-height: 480px; }
+      .container .home-container .home-middle .home-middle-logo:before {
+        height: 200px;
+        width: 200px; }
+      .container .home-container .home-middle .home-middle-logo {
+        height: 180px;
+        width: 180px; } }
   .container .about-background {
     background: url("../images/himalayas.jpg") no-repeat fixed center center;
     background-size: cover; }
