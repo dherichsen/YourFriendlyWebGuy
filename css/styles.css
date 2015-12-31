@@ -300,12 +300,7 @@ html {
         text-align: center;
         border: 3px solid black; }
   .container .section-content {
-    padding-left: 25px;
-    padding-right: 25px;
-    position: relative;
-    float: left;
-    margin-left: 8.5%;
-    width: 83%; }
+    width: 100%; }
   .container .section-content-wide {
     width: 100%; }
   .container .content-text {
@@ -434,6 +429,13 @@ html {
           font-style: italic;
           font-size: 14px; }
   @media screen and (min-width: 480px) {
+    .container .section-content {
+      padding-left: 25px;
+      padding-right: 25px;
+      position: relative;
+      float: left;
+      margin-left: 8.5%;
+      width: 83%; }
     .container .content-text .about-btn-container {
       font-size: 0; }
       .container .content-text .about-btn-container #hideBio, .container .content-text .about-btn-container #showBio {
