@@ -35,6 +35,7 @@ html{ margin: 0; padding: 0;}
   @import 'about';
   @import 'image-gallery';
   @import 'portfolio';
+  @import 'resources';
   @import 'contact';
 }
 
@@ -49,6 +50,10 @@ html{ margin: 0; padding: 0;}
   .resources-container-section{
     @include row;
   }
+
+//}
+
+@media screen and (min-width: 480px){
   .container{
     .container-top{
       height: 300px;
@@ -64,6 +69,5 @@ html{ margin: 0; padding: 0;}
         }
       }
     }
-    @import 'resources';
   }
-//}
+}
