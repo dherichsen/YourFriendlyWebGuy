@@ -39,7 +39,7 @@ html{ margin: 0; padding: 0;}
 }
 
 // If the screen is at least 480px wide
-@media screen and (min-device-width: 480px){
+//@media screen and (min-device-width: 480px){
   .nav-top,
   .nav-menu,
   .about-container-header,
@@ -66,4 +66,4 @@ html{ margin: 0; padding: 0;}
     }
     @import 'resources';
   }
-}
+//}
