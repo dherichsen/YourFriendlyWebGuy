@@ -1,9 +1,5 @@
 .section-content{
-  padding-left: 25px;
-  padding-right: 25px;
-  position: relative;
-  @include offset(left,.5);
-  width: columns(5);
+  width: 100%;
 }
 
 // Section wide
@@ -207,7 +203,15 @@
 */
 
 @media screen and (min-width:480px){
-    .content-text{
+  .section-content{
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    @include offset(left,.5);
+    width: columns(5);
+  }
+
+  .content-text{
       .about-btn-container{
         font-size: 0;
         #hideBio, #showBio{
