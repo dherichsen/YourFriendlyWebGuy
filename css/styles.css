@@ -326,15 +326,13 @@ html {
     .container .content-text .white-text {
       color: white; }
     .container .content-text .about-btn-container {
-      width: 500px;
+      width: 80%;
       margin: 0 auto;
       padding: 25px 0;
       margin-bottom: 30px; }
-      .container .content-text .about-btn-container #hideBio, .container .content-text .about-btn-container #showBio {
-        margin-right: 15px; }
       .container .content-text .about-btn-container .aboutBtn {
-        width: 240px;
-        display: inline-block;
+        width: 100%;
+        display: block;
         background: none;
         color: #fff;
         font-size: 32px;
@@ -344,6 +342,8 @@ html {
         border: 3px solid #fff;
         border-radius: 2px;
         transition: all .3s ease; }
+      .container .content-text .about-btn-container .aboutBtn:last-child {
+        margin-top: 20px; }
       .container .content-text .about-btn-container .aboutBtn:hover {
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.2); }
@@ -433,6 +433,16 @@ html {
         .container .content-university .university-right p strong {
           font-style: italic;
           font-size: 14px; }
+  @media screen and (min-width: 480px) {
+    .container .content-text .about-btn-container {
+      font-size: 0; }
+      .container .content-text .about-btn-container #hideBio, .container .content-text .about-btn-container #showBio {
+        margin-right: 10%; }
+      .container .content-text .about-btn-container .aboutBtn {
+        display: inline-block;
+        width: 45%; }
+      .container .content-text .about-btn-container .aboutBtn:last-child {
+        margin-top: 0; } }
   @media screen and (min-width: 480px) and (max-width: 800px) {
     .container .section-content .content-university {
       background-color: #fff;
@@ -686,12 +696,7 @@ html {
       display: block;
       width: 100%;
       height: 50vh;
-      background-color: rgba(0, 0, 0, 0.6);
-      -webkit-filter: blur(15px);
-      -moz-filter: blur(15px);
-      -o-filter: blur(15px);
-      -ms-filter: blur(15px);
-      filter: blur(15px); }
+      background-color: rgba(0, 0, 0, 0.6); }
     .container .home-container .home-bottom {
       animation-delay: .6s;
       height: 50vh;
@@ -770,7 +775,7 @@ html {
       height: 40vh; }
     .container .home-bottom {
       height: 40vh; } }
-  @media screen and (min-width: 480px) and (max-width: 800px) {
+  @media screen and (min-width: 480px) {
     .container .home-container {
       min-height: 480px; }
       .container .home-container .home-middle .home-middle-logo:before {
@@ -778,7 +783,13 @@ html {
         width: 200px; }
       .container .home-container .home-middle .home-middle-logo {
         height: 180px;
-        width: 180px; } }
+        width: 180px; }
+      .container .home-container .home-bottom:before {
+        -webkit-filter: blur(15px);
+        -moz-filter: blur(15px);
+        -o-filter: blur(15px);
+        -ms-filter: blur(15px);
+        filter: blur(15px); } }
   .container .about-background {
     background: url("../images/himalayas.jpg") no-repeat fixed center center;
     background-size: cover; }

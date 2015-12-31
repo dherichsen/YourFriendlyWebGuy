@@ -24,17 +24,14 @@
   p:last-child{  margin-bottom: 40px;  }
   .white-text{ color: white;}
   .about-btn-container{
-    width: 500px;
+    width: 80%;
     margin: 0 auto;
     padding: 25px 0;
     margin-bottom: 30px;
-    #hideBio, #showBio{
-      margin-right: 15px;
-    }
     .aboutBtn{
       //position: relative;
-      width: 240px;
-      display: inline-block;
+      width: 100%;
+      display: block;
       background: none;
       color: #fff;
       font-size: 32px;
@@ -45,6 +42,9 @@
       border: 3px solid #fff;
       border-radius: 2px;
       transition: all .3s ease;
+    }
+    .aboutBtn:last-child{
+      margin-top: 20px;
     }
     .aboutBtn:hover{
       cursor: pointer;
@@ -205,6 +205,26 @@
   }
 }
 */
+
+@media screen and (min-width:480px){
+    .content-text{
+      .about-btn-container{
+        font-size: 0;
+        #hideBio, #showBio{
+          margin-right: 10%;
+        }
+        .aboutBtn{
+          display: inline-block;
+          width: 45%;
+
+        }
+        .aboutBtn:last-child{
+          margin-top: 0;
+        }
+      }
+    }
+
+}
 
 @media screen and (min-width:480px) and (max-width: 800px){
   .section-content{
