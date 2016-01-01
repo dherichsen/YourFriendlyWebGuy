@@ -773,7 +773,7 @@ html {
       .container .home-container .home-bottom .scroll-button {
         display: block;
         position: absolute;
-        bottom: 25px;
+        bottom: 10px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -822,12 +822,6 @@ html {
       height: 100%;
       border-top: solid white 1px;
       background-color: #2A9D8F; }
-  @media screen and (min-width: 800px) {
-    .container .home-middle {
-      display: none;
-      height: 40vh; }
-    .container .home-bottom {
-      height: 40vh; } }
   @media screen and (min-width: 480px) {
     .container .home-container {
       min-height: 480px; }
@@ -848,6 +842,15 @@ html {
         height: 50vh; }
         .container .home-container .home-bottom .home-bottom-header {
           padding-top: 50px; } }
+  @media screen and (min-width: 680px) {
+    .container .home-container .home-bottom .scroll-button {
+      bottom: 25px; } }
+  @media screen and (min-width: 800px) {
+    .container .home-middle {
+      display: none;
+      height: 40vh; }
+    .container .home-bottom {
+      height: 40vh; } }
   .container .about-background {
     background: url("../images/himalayas.jpg") no-repeat fixed center center;
     background-size: cover; }
