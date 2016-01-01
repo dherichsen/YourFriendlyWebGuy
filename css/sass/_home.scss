@@ -80,7 +80,7 @@
     .scroll-button{
       display: block;
       position: absolute;
-      bottom: 25px;
+      bottom: 10px;
       left: 0; right: 0;
       margin: 0 auto;
       width: 60px; height: 60px;
@@ -136,6 +136,16 @@
       //height: 500px;
       .home-bottom-header{
         padding-top: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 680px){
+  .home-container{
+    .home-bottom{
+      .scroll-button{
+        bottom: 25px;
       }
     }
   }
