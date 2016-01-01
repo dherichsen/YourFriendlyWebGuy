@@ -1,5 +1,6 @@
 .section-content{
   width: 100%;
+  //min-width: 680px;
 }
 
 // Section wide
@@ -118,8 +119,34 @@
     width: 33%;
     height: 285px;
     padding: 5px;
+    ul{
+      padding-left: 0px;
+    }
+  }
+  .thumb{
+    display: block;
+    width: 285px;
+    margin: 0 auto;
   }
 }
+
+.content-divided-thumb{
+  position: relative;
+  //padding-top: 20px;
+  width: 100%;
+  .thumb{
+    display: block;
+    vertical-align: top;
+    height: 285px;
+    padding: 5px;
+    width: 285px;
+    margin: 0 auto;
+    ul{
+      padding-left: 0px;
+    }
+  }
+}
+
 
 // Section for dividing the content in half
 .content-half{
@@ -207,8 +234,7 @@
     padding-left: 25px;
     padding-right: 25px;
     position: relative;
-    @include offset(left,.5);
-    width: columns(5);
+    width: 100%;
   }
 
   .content-text{
@@ -227,7 +253,46 @@
         }
       }
     }
+}
 
+@media screen and (min-width: 680px){
+  .section-content{ @include offset(left,.5);  width: columns(5);}
+  // Content for a section divded in thirds
+  .content-divided-thumb{
+    position: relative;
+    //padding-top: 20px;
+    width: 100%;
+    .thumb{
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      height: 285px;
+      padding: 5px;
+      ul{
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px){
+  .section-content{ @include offset(left,.5);  width: columns(5);}
+  // Content for a section divded in thirds
+  .content-divided-thumb{
+    position: relative;
+    //padding-top: 20px;
+    width: 100%;
+    .thumb{
+      display: inline-block;
+      vertical-align: top;
+      width: 33%;
+      height: 285px;
+      padding: 5px;
+      ul{
+        padding-left: 0px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width:480px) and (max-width: 800px){

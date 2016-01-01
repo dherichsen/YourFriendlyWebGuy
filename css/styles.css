@@ -133,10 +133,10 @@ html {
 .borders-bottom {
   border-bottom: 2px black solid; }
 
-.borders-sides {
-  border-left: 2px black solid;
-  border-right: 2px black solid; }
-
+@media screen and (min-width: 680px) {
+  .borders-sides {
+    border-left: 2px black solid;
+    border-right: 2px black solid; } }
 .skewed-right {
   -webkit-transform: skew(10deg, 0deg);
   transform: skew(10deg, 0deg);
@@ -376,6 +376,24 @@ html {
       width: 33%;
       height: 285px;
       padding: 5px; }
+      .container .content-divided > div ul {
+        padding-left: 0px; }
+    .container .content-divided .thumb {
+      display: block;
+      width: 285px;
+      margin: 0 auto; }
+  .container .content-divided-thumb {
+    position: relative;
+    width: 100%; }
+    .container .content-divided-thumb .thumb {
+      display: block;
+      vertical-align: top;
+      height: 285px;
+      padding: 5px;
+      width: 285px;
+      margin: 0 auto; }
+      .container .content-divided-thumb .thumb ul {
+        padding-left: 0px; }
   .container .content-half {
     width: 49.5%;
     display: inline-block;
@@ -433,9 +451,7 @@ html {
       padding-left: 25px;
       padding-right: 25px;
       position: relative;
-      float: left;
-      margin-left: 8.5%;
-      width: 83%; }
+      width: 100%; }
     .container .content-text .about-btn-container {
       font-size: 0; }
       .container .content-text .about-btn-container #hideBio, .container .content-text .about-btn-container #showBio {
@@ -445,6 +461,38 @@ html {
         width: 45%; }
       .container .content-text .about-btn-container .aboutBtn:last-child {
         margin-top: 0; } }
+  @media screen and (min-width: 680px) {
+    .container .section-content {
+      float: left;
+      margin-left: 8.5%;
+      width: 83%; }
+    .container .content-divided-thumb {
+      position: relative;
+      width: 100%; }
+      .container .content-divided-thumb .thumb {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        height: 285px;
+        padding: 5px; }
+        .container .content-divided-thumb .thumb ul {
+          padding-left: 0px; } }
+  @media screen and (min-width: 800px) {
+    .container .section-content {
+      float: left;
+      margin-left: 8.5%;
+      width: 83%; }
+    .container .content-divided-thumb {
+      position: relative;
+      width: 100%; }
+      .container .content-divided-thumb .thumb {
+        display: inline-block;
+        vertical-align: top;
+        width: 33%;
+        height: 285px;
+        padding: 5px; }
+        .container .content-divided-thumb .thumb ul {
+          padding-left: 0px; } }
   @media screen and (min-width: 480px) and (max-width: 800px) {
     .container .section-content .content-university {
       background-color: #fff;
@@ -829,41 +877,42 @@ html {
     background: url("../images/lil_fiber.png") repeat; }
   .container .bg-white-opac {
     background-color: rgba(255, 255, 255, 0.8); }
-  .container .bg-gradient {
-    background: linear-gradient(181deg, #E9C46A, white, #E9C46A);
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 12s ease infinite;
-    -moz-animation: AnimationName 12s ease infinite;
-    -o-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 12s ease infinite; }
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
-@-o-keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
-@keyframes AnimationName {
-  0% {
-    background-position: 87% 0%; }
-  50% {
-    background-position: 14% 100%; }
-  100% {
-    background-position: 87% 0%; } }
+  @media screen and (min-width: 680px) {
+    .container .bg-gradient {
+      background: linear-gradient(181deg, #E9C46A, white, #E9C46A);
+      background-size: 600% 600%;
+      -webkit-animation: AnimationName 12s ease infinite;
+      -moz-animation: AnimationName 12s ease infinite;
+      -o-animation: AnimationName 12s ease infinite;
+      animation: AnimationName 12s ease infinite; }
+    @-webkit-keyframes AnimationName {
+      0% {
+        background-position: 87% 0%; }
+      50% {
+        background-position: 14% 100%; }
+      100% {
+        background-position: 87% 0%; } }
+    @-moz-keyframes AnimationName {
+      0% {
+        background-position: 87% 0%; }
+      50% {
+        background-position: 14% 100%; }
+      100% {
+        background-position: 87% 0%; } }
+    @-o-keyframes AnimationName {
+      0% {
+        background-position: 87% 0%; }
+      50% {
+        background-position: 14% 100%; }
+      100% {
+        background-position: 87% 0%; } }
+    @keyframes AnimationName {
+      0% {
+        background-position: 87% 0%; }
+      50% {
+        background-position: 14% 100%; }
+      100% {
+        background-position: 87% 0%; } } }
   .container .about-container {
     position: relative; }
     .container .about-container .about-container-section {
