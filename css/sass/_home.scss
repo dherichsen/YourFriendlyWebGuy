@@ -84,8 +84,9 @@
       left: 0; right: 0;
       margin: 0 auto;
       width: 60px; height: 60px;
-      background: url("../images/double-arrow-white.png");
-      background-size: contain;
+      text-align: center;
+      /*background: url("../images/double-arrow-white.png");
+      background-size: contain;*/
       animation: bounce 2s infinite;
       -webkit-animation: bounce 2s infinite;
       -moz-animation: bounce 2s infinite;
@@ -105,13 +106,6 @@
   }
 }
 
-@media screen and (min-width: 800px){
-  .home-middle{ display: none; height: 40vh;}
-  .home-bottom{ height: 40vh;}
-  .scroll-button{
-
-  }
-}
 
 @media screen and (min-width: 480px){
   .home-container{
@@ -144,6 +138,14 @@
         padding-top: 50px;
       }
     }
+  }
+}
+
+@media screen and (min-width: 800px){
+  .home-middle{ display: none; height: 40vh;}
+  .home-bottom{ height: 40vh;}
+  .scroll-button{
+
   }
 }
 
