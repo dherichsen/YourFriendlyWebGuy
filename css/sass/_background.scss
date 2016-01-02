@@ -1,23 +1,22 @@
  .about-background{
-    background: url("../images/himalayas.jpg") no-repeat fixed center center;
-    background-size: cover;
+    background: url("../images/himalayas.jpg") no-repeat center 20%;
   }
  .contact-background{
-    background: url("../images/florida-black.jpg") no-repeat fixed center bottom;
-    background-size: cover;
+    background: url("../images/florida-black.jpg") no-repeat center 40%;
   }
   .portfolio-background{
-    background: url("../images/newyork.jpg") no-repeat fixed center bottom;
-    background-size: cover;
+    background: url("../images/newyork.jpg") no-repeat center 40%;
   }
   .resources-background{
-    background: url("../images/office.jpg") no-repeat fixed center bottom;
-    background-size: cover;
+    background: url("../images/office.jpg") no-repeat center 40%;
   }
 
-  .bg-about1{
-    background: url("../images/pic1.jpg") no-repeat fixed center center;
-    background-size: cover;
+  @media screen and (min-width: 680px){
+    .about-background, .contact-background, .portfolio-background, .resources-background{
+      background-attachment: fixed;
+      background-size: cover;
+      //background-position: center center;
+    }
   }
 
  .background-wrapper{

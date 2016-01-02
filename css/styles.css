@@ -24,16 +24,16 @@ h1 {
   line-height: 64px; }
 
 h2 {
-  font-size: 18px;
-  line-height: 31px; }
+  font-size: 28px;
+  line-height: 36px; }
 
 h3 {
-  font-size: 16px;
-  line-height: 22px; }
+  font-size: 32px;
+  line-height: 48px; }
 
 h4 {
-  font-size: 14px;
-  line-height: 26px; }
+  font-size: 20px;
+  line-height: 31px; }
 
 p {
   font-size: 12px;
@@ -186,77 +186,12 @@ html {
   padding-top: 25px;
   padding-bottom: 25px; }
 
-/* Buzz */
-@-webkit-keyframes hvr-buzz {
-  50% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg); }
-  100% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg); } }
-@keyframes hvr-buzz {
-  50% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg); }
-  100% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg); } }
-.hvr-buzz {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-.hvr-buzz:hover, .hvr-buzz:focus, .hvr-buzz:active {
-  -webkit-animation-name: hvr-buzz;
-  animation-name: hvr-buzz;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
-.hvr-glow {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: all;
-  transition-property: all; }
-
-.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.05); }
-  100% {
-    -webkit-transform: scale(1); } }
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.05); }
-  100% {
-    transform: scale(1); } }
-.pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: infinite; }
-
 * {
   box-sizing: border-box; }
 
 .container {
   overflow: hidden;
+  /* Buzz */
   /* Content for a section divded in thirds
   .content-divided{
     position: relative;
@@ -299,6 +234,66 @@ html {
         color: black;
         text-align: center;
         border: 3px solid black; }
+@-webkit-keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+@keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+  .container .hvr-buzz {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .container .hvr-buzz:hover, .container .hvr-buzz:focus, .container .hvr-buzz:active {
+    -webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .container .hvr-glow {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: all;
+    transition-property: all; }
+  .container .hvr-glow:hover, .container .hvr-glow:focus, .container .hvr-glow:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+  .container .pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; }
   .container .section-content {
     width: 100%; }
   .container .section-content-wide {
@@ -330,7 +325,7 @@ html {
         display: block;
         background: none;
         color: #fff;
-        font-size: 32px;
+        font-size: 24px;
         font-family: 'Amatic SC', cursive;
         height: 50%;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -370,7 +365,7 @@ html {
   .container .content-divided {
     position: relative;
     width: 100%;
-    padding-left: 5%; }
+    padding-left: 2%; }
     .container .content-divided > div {
       display: inline-block;
       vertical-align: top;
@@ -472,7 +467,11 @@ html {
         height: 285px;
         padding: 5px; }
         .container .content-divided-thumb .thumb ul {
-          padding-left: 0px; } }
+          padding-left: 0px; }
+    .container .content-divided {
+      padding-left: 5%; }
+    .container .content-text .about-btn-container .aboutBtn {
+      font-size: 28px; } }
   @media screen and (min-width: 800px) {
     .container .section-content {
       float: left;
@@ -489,6 +488,8 @@ html {
         padding: 5px; }
         .container .content-divided-thumb .thumb ul {
           padding-left: 0px; }
+    .container .content-text .about-btn-container .aboutBtn {
+      font-size: 32px; }
     .container .content-university {
       background-color: #fff;
       padding: 10px 0 5px 0;
@@ -704,8 +705,6 @@ html {
     width: 100%;
     height: 102vh;
     background: url("../images/northern_lights1.jpg") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
     overflow: hidden; }
     .container .home-container .home-top {
       position: relative;
@@ -841,8 +840,11 @@ html {
         .container .home-container .home-bottom .home-bottom-header {
           padding-top: 50px; } }
   @media screen and (min-width: 680px) {
-    .container .home-container .home-bottom .scroll-button {
-      bottom: 25px; } }
+    .container .home-container {
+      background-size: cover;
+      background-attachment: fixed; }
+      .container .home-container .home-bottom .scroll-button {
+        bottom: 25px; } }
   @media screen and (min-width: 800px) {
     .container .home-middle {
       display: none;
@@ -850,20 +852,17 @@ html {
     .container .home-bottom {
       height: 40vh; } }
   .container .about-background {
-    background: url("../images/himalayas.jpg") no-repeat fixed center center;
-    background-size: cover; }
+    background: url("../images/himalayas.jpg") no-repeat center 20%; }
   .container .contact-background {
-    background: url("../images/florida-black.jpg") no-repeat fixed center bottom;
-    background-size: cover; }
+    background: url("../images/florida-black.jpg") no-repeat center 40%; }
   .container .portfolio-background {
-    background: url("../images/newyork.jpg") no-repeat fixed center bottom;
-    background-size: cover; }
+    background: url("../images/newyork.jpg") no-repeat center 40%; }
   .container .resources-background {
-    background: url("../images/office.jpg") no-repeat fixed center bottom;
-    background-size: cover; }
-  .container .bg-about1 {
-    background: url("../images/pic1.jpg") no-repeat fixed center center;
-    background-size: cover; }
+    background: url("../images/office.jpg") no-repeat center 40%; }
+  @media screen and (min-width: 680px) {
+    .container .about-background, .container .contact-background, .container .portfolio-background, .container .resources-background {
+      background-attachment: fixed;
+      background-size: cover; } }
   .container .background-wrapper {
     height: 100%;
     width: 100%; }

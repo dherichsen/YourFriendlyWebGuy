@@ -3,8 +3,6 @@
   width: 100%;
   height: 102vh;
   background: url("../images/northern_lights1.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
   overflow: hidden;
   .home-top{
     position: relative;
@@ -143,6 +141,8 @@
 
 @media screen and (min-width: 680px){
   .home-container{
+    background-size: cover;
+    background-attachment: fixed;
     .home-bottom{
       .scroll-button{
         bottom: 25px;
