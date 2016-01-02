@@ -65,7 +65,7 @@ li {
     font-size: 24px;
     line-height: 34px; }
 
-  p {
+  li, p {
     font-size: 14px;
     line-height: 24px; }
 
@@ -88,7 +88,7 @@ li {
     font-size: 28px;
     line-height: 34px; }
 
-  p {
+  li, p {
     font-size: 16px;
     line-height: 26px; }
 
@@ -369,7 +369,8 @@ html {
       color: #2A9D8F; }
   .container .content-divided {
     position: relative;
-    width: 100%; }
+    width: 100%;
+    padding-left: 5%; }
     .container .content-divided > div {
       display: inline-block;
       vertical-align: top;
@@ -377,11 +378,8 @@ html {
       height: 285px;
       padding: 5px; }
       .container .content-divided > div ul {
-        padding-left: 0px; }
-    .container .content-divided .thumb {
-      display: block;
-      width: 285px;
-      margin: 0 auto; }
+        padding-left: 0px;
+        list-style-type: none; }
   .container .content-divided-thumb {
     position: relative;
     width: 100%; }
@@ -423,18 +421,16 @@ html {
     .container .content-university .university-left {
       margin: 0 3% 0 11%;
       width: 19%;
-      display: inline-block; }
+      display: none;
+      vertical-align: middle; }
     .container .content-university .university-right {
-      width: 60%;
-      margin-left: 6%;
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-      padding-top: 10px; }
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
       .container .content-university .university-right h3 {
         font-family: 'Josefin Sans', sans-serif;
         font-weight: 300;
-        text-align: left;
+        text-align: center;
         font-size: 26px; }
       .container .content-university .university-right p {
         margin: 0;
@@ -492,34 +488,36 @@ html {
         height: 285px;
         padding: 5px; }
         .container .content-divided-thumb .thumb ul {
-          padding-left: 0px; } }
-  @media screen and (min-width: 480px) and (max-width: 800px) {
-    .container .section-content .content-university {
+          padding-left: 0px; }
+    .container .content-university {
       background-color: #fff;
       padding: 10px 0 5px 0;
+      width: 100%;
+      margin: 0 auto;
       border: 2px solid black; }
-      .container .section-content .content-university .university-left {
+      .container .content-university .university-left {
         margin: 0 3% 0 11%;
         width: 19%;
-        display: none; }
-      .container .section-content .content-university .university-right {
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 10px; }
-        .container .section-content .content-university .university-right h3 {
+        display: inline-block; }
+      .container .content-university .university-right {
+        width: 50%;
+        margin-left: 6%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center; }
+        .container .content-university .university-right h3 {
           font-family: 'Josefin Sans', sans-serif;
           font-weight: 300;
           text-align: center;
           font-size: 26px; }
-        .container .section-content .content-university .university-right p {
+        .container .content-university .university-right p {
           margin: 0;
           margin-left: 25px;
           font-family: 'Josefin Sans', sans-serif;
           font-weight: 300;
           font-size: 20px;
           line-height: 31px; }
-          .container .section-content .content-university .university-right p strong {
+          .container .content-university .university-right p strong {
             font-style: italic;
             font-size: 14px; } }
   .container .skills li {

@@ -113,6 +113,7 @@
   position: relative;
   //padding-top: 20px;
   width: 100%;
+  padding-left: 5%;
   > div{
     display: inline-block;
     vertical-align: top;
@@ -121,12 +122,11 @@
     padding: 5px;
     ul{
       padding-left: 0px;
+      list-style-type: none;
+      li{
+
+      }
     }
-  }
-  .thumb{
-    display: block;
-    width: 285px;
-    margin: 0 auto;
   }
 }
 
@@ -176,7 +176,6 @@
   .white-text{ color: white;}
 }
 
-// Styling for the education section
 .content-university{
   background-color: #fff;
   padding: 10px 0 5px 0;
@@ -184,19 +183,18 @@
   .university-left{
     margin: 0 3% 0 11%;
     width: 19%;
-    display: inline-block;
+    display: none;
+    vertical-align: middle;
   }
   .university-right{
-    width: 60%;
-    margin-left: 6%;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    padding-top: 10px;
+
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
     h3{
       font-family: 'Josefin Sans', sans-serif;
       font-weight: 300;
-      text-align: left;
+      text-align: center;
       font-size: 26px;
     }
     p{
@@ -213,6 +211,7 @@
     }
   }
 }
+
 
 /*.content-half{
   display: block;
@@ -273,6 +272,7 @@
       }
     }
   }
+
 }
 
 @media screen and (min-width: 800px){
@@ -293,45 +293,50 @@
       }
     }
   }
+  // Styling for the education section
+  .content-university{
+    background-color: #fff;
+    padding: 10px 0 5px 0;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid black;
+    .university-left{
+      margin: 0 3% 0 11%;
+      width: 19%;
+      display: inline-block;
+    }
+    .university-right{
+      width: 50%;
+      margin-left: 6%;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      //padding-top: 10px;
+      h3{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        font-size: 26px;
+      }
+      p{
+        margin: 0;
+        margin-left: 25px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 31px;
+        strong{
+          font-style: italic;
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width:480px) and (max-width: 800px){
   .section-content{
-    .content-university{
-      background-color: #fff;
-      padding: 10px 0 5px 0;
-      border: 2px solid black;
-      .university-left{
-        margin: 0 3% 0 11%;
-        width: 19%;
-        display: none;
-      }
-      .university-right{
 
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 10px;
-        h3{
-          font-family: 'Josefin Sans', sans-serif;
-          font-weight: 300;
-          text-align: center;
-          font-size: 26px;
-        }
-        p{
-          margin: 0;
-          margin-left: 25px;
-          font-family: 'Josefin Sans', sans-serif;
-          font-weight: 300;
-          font-size: 20px;
-          line-height: 31px;
-          strong{
-            font-style: italic;
-            font-size: 14px;
-          }
-        }
-      }
-    }
   }
 
 }
