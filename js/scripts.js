@@ -13,10 +13,11 @@ $(window).scroll(function() {
     }
 
     if(($(window).scrollTop() > 50) && ($(window).width() > 800)){
+        console.log('hey');
         $('#nav-home').addClass('fixed-home');
         $('#home-link-img').css("padding-top","52px");
         $('#home-link-img').css("padding-bottom","5px");
-    }else{
+    }else if(($(window).scrollTop() < 50) && ($(window).width() > 800)){
         $('#nav-home').removeClass('fixed-home');
         $('#home-link-img').css("padding-top","17px");
         $('#home-link-img').css("padding-bottom","17px");
