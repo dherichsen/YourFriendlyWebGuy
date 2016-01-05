@@ -12,7 +12,7 @@ $(window).scroll(function() {
         $('#nav-two').removeClass('fixed-two');
     }
 
-    if($(window).scrollTop() > 50){
+    if(($(window).scrollTop() > 50) && ($(window).width() > 800)){
         $('#nav-home').addClass('fixed-home');
         $('#home-link-img').css("padding-top","52px");
         $('#home-link-img').css("padding-bottom","5px");
@@ -41,6 +41,7 @@ $(window).scroll(function() {
      }
      */
     winHeight = $(window).height();
+    toScroll = winHeight/2;
     var offsetHeight = (winHeight * .3) - 20;
     if($(window).scrollTop() > offsetHeight){
         $('.container-header').addClass('container-header-absolute');
@@ -56,6 +57,7 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
     winHeight = $(window).height();
+    toScroll = winHeight/2;
     // device detection
     var isMobile = false;
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -147,7 +149,7 @@ $(document).ready(function(){
     // Make this more concise
     $('#scrollbtn').on('click', function(event) {
         event.preventDefault();
-        var targetST = winHeight;
+        var targetST = toScroll;
         //var targetST = $('#about').offset().top;
         $('body, html').animate({
             scrollTop: targetST + 'px'
