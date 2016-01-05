@@ -1394,6 +1394,64 @@ html {
   margin: 0 auto;
   text-align: center; }
 
+@media screen and (min-width: 480px) {
+  .container .container-top .container-header {
+    position: fixed;
+    width: 400px;
+    margin-left: -200px; }
+  .container .container-top .container-header h1 {
+    width: 300px; }
+  .container .container-top .container-header h2:before {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+    -webkit-filter: blur(5px);
+    filter: blur(5px); }
+  .container .container-top .container-header h2 {
+    line-height: 50px;
+    font-size: 32px; }
+  .container .container-top .container-header h4:before {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+    -webkit-filter: blur(5px);
+    filter: blur(5px); }
+  .container .container-top .container-header-absolute {
+    position: absolute;
+    bottom: 20px; } }
+@media screen and (min-width: 680px) {
+  .container .container-top .container-header {
+    position: fixed;
+    width: 600px;
+    margin-left: -300px; }
+  .container .container-top .container-header h1 {
+    width: 300px; }
+  .container .container-top .container-header h2:before {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+    -webkit-filter: blur(5px);
+    filter: blur(5px); }
+  .container .container-top .container-header h2 {
+    line-height: 50px;
+    font-size: 32px; }
+  .container .container-top .container-header h4:before {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+    -webkit-filter: blur(5px);
+    filter: blur(5px); }
+  .container .container-top .container-header-absolute {
+    position: absolute;
+    bottom: 20px; } }
 @media screen and (min-width: 800px) {
   .container .container-top .container-header {
     position: fixed;
