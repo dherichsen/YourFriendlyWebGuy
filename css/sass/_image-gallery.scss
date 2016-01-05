@@ -16,14 +16,14 @@
       margin: 0;
       @include clearfix;
       li {
-        width: 25%;
+        width: 50%;
         height: auto;
         float: left;
         a {
           background: #fff;
-          display: inline;
+          display: block;
           float: left;
-          margin: 0 0 10px 10px;
+          margin: 0 0 50px 10px;
           width: auto;
           padding: 10px 10px 15px;
           text-align: center;
@@ -53,6 +53,11 @@
           z-index: 5;
           -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
           -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+        }
+      }
+      li:first-child{
+        a{
+          margin-bottom: 10px;
         }
       }
       /* Rotate all even images 2 degrees */
@@ -93,6 +98,16 @@
 
   .pad-bottom{
     padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .polaroids{
+    ul{
+      li{
+        width: 25%;
+      }
+    }
   }
 }
 

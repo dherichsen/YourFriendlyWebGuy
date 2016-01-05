@@ -7,26 +7,83 @@ html{ margin: 0; padding: 0;}
 // Sets the layout for all box-sizing
 *{  box-sizing: border-box;  }
 
-// fix this
+// Mobile Layout
 .container{
   overflow: hidden;
   .container-top{
     position: relative;
-    height: 150px;
+    width: 100%;
+    height: 102vh;
     .container-header{
-      position: relative;
-      width: 150px;
-      top: 50px;
-      margin: 0 auto;
-      margin-bottom: 50px;
+      position: absolute;
+      bottom: 30vh;
+      left: 50%;
+      width: 400px;
+      margin-left: -200px;
       h1{
+        position: relative;
+        margin: 0 auto;
         background-color: white;
-        //font-size: 44px;
+        width: 300px;
         color: black;
         text-align: center;
         border: 3px solid black;
+        margin-bottom: 20px;
+      }
+      h2:before{
+        content: '';
+        background-color: rgba(0,0,0,.8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        //padding: 10px;
+      }
+      h2{
+        padding: 5px;
+        text-align: center;
+        color: white;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        font-weight: 300;
+      }
+      h4:before{
+        content: '';
+        background-color: rgba(0,0,0,.8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+      }
+      h4{
+        color: white;
+        text-align: center;
+        margin-left: 70%;
+        width: 30%;
+        padding: 5px;
+        position: relative;
+        z-index: 1;
       }
     }
+    .scroll-button{
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 0; right: 0;
+      margin: 0 auto;
+      width: 60px; height: 60px;
+      text-align: center;
+      animation: bounce 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      -moz-animation: bounce 2s infinite;
+      -o-animation: bounce 2s infinite;
+    }
+    @import 'arrow';
   }
   @import 'animations';
   @import 'section-content';
@@ -38,6 +95,47 @@ html{ margin: 0; padding: 0;}
   @import 'portfolio';
   @import 'resources';
   @import 'contact';
+}
+
+
+@media screen and (min-width:800px){
+  .container{
+    .container-top{
+      .container-header{
+        position: fixed;
+        width: 800px;
+        margin-left: -400px;
+        h1{
+          width: 300px;
+        }
+        h2:before{
+          -webkit-filter: blur(5px);
+          -moz-filter: blur(5px);
+          -o-filter: blur(5px);
+          -ms-filter: blur(5px);
+          filter: blur(5px);
+        }
+        h2{
+          line-height: 50px;
+          font-size: 32px;
+        }
+        h4:before{
+          -webkit-filter: blur(5px);
+          -moz-filter: blur(5px);
+          -o-filter: blur(5px);
+          -ms-filter: blur(5px);
+          filter: blur(5px);
+        }
+        h4{
+
+        }
+      }
+      .container-header-absolute{
+        position: absolute;
+        bottom: 20px;
+      }
+    }
+  }
 }
 
 // If the screen is at least 480px wide
@@ -53,7 +151,7 @@ html{ margin: 0; padding: 0;}
   }
 
 //}
-
+/*
 @media screen and (min-width: 480px){
   .container{
     .container-top{
@@ -72,3 +170,26 @@ html{ margin: 0; padding: 0;}
     }
   }
 }
+*/
+
+
+/*
+ .container-top{
+   position: relative;
+   height: 150px;
+   .container-header{
+     position: relative;
+     width: 150px;
+     top: 50px;
+     margin: 0 auto;
+     margin-bottom: 50px;
+     h1{
+       background-color: white;
+       //font-size: 44px;
+       color: black;
+       text-align: center;
+       border: 3px solid black;
+     }
+   }
+ }
+ */

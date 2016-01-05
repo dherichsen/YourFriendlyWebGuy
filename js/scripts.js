@@ -40,10 +40,22 @@ $(window).scroll(function() {
      $('#about-menu').removeClass('show-menu');
      }
      */
+    winHeight = $(window).height();
+    var offsetHeight = (winHeight * .3) - 20;
+    if($(window).scrollTop() > offsetHeight){
+        $('.container-header').addClass('container-header-absolute');
+    }else{
+        $('.container-header').removeClass('container-header-absolute');
+    }
+    if($(window).scrollTop() > 100){
+        $('.scroll-button').css('display','none');
+    }else{
+        $('.scroll-button').css('display','block');
+    }
 });
 
 $(document).ready(function(){
-
+    winHeight = $(window).height();
     // device detection
     var isMobile = false;
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -135,7 +147,8 @@ $(document).ready(function(){
     // Make this more concise
     $('#scrollbtn').on('click', function(event) {
         event.preventDefault();
-        var targetST = $('#about').offset().top;
+        var targetST = winHeight;
+        //var targetST = $('#about').offset().top;
         $('body, html').animate({
             scrollTop: targetST + 'px'
         }, 700);
@@ -164,6 +177,7 @@ $(document).ready(function(){
         var idWrap = "#";
         var newTarget = idWrap.concat(targetID.substring(0,(targetID.indexOf('-'))+1).concat("frame"));
         $(newTarget).addClass('show-work');
+        $('.nav-bar-inner').css("display","none");
     });
 
     // Portfolio close button
@@ -173,6 +187,7 @@ $(document).ready(function(){
         var idWrap = "#";
         var newTarget = idWrap.concat(targetID);
         $(newTarget).removeClass('show-work');
+        $('.nav-bar-inner').css("display","block");
     });
 
     $('.tab-btn').on('click', function(evt){
@@ -187,7 +202,7 @@ $(document).ready(function(){
 
     // Handles navation
     $('.nav-bar-inner div').on('click', function(event) {
-        event.preventDefault();
+        //event.preventDefault();
         var targetID = $(this).children().attr('href');
         var targetST = $(targetID).offset().top;
         $('body, html').animate({
