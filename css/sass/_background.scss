@@ -1,18 +1,18 @@
  .about-background{
-    background: url("../images/himalayas.jpg") no-repeat center 20%;
-    background-size: cover;
+    background: url("../images/himalayas.jpg") no-repeat center center;
+    //background-size: cover;
   }
  .contact-background{
-    background: url("../images/florida-black.jpg") no-repeat center 40%;
-    background-size: cover;
+    background: url("../images/florida-black.jpg") no-repeat center center;
+    //background-size: cover;
   }
   .portfolio-background{
-    background: url("../images/newyork.jpg") no-repeat center 40%;
-    background-size: cover;
+    background: url("../images/newyork.jpg") no-repeat center center;
+    //background-size: cover;
   }
   .resources-background{
-    background: url("../images/office.jpg") no-repeat center 40%;
-    background-size: cover;
+    background: url("../images/office.jpg") no-repeat center center;
+    //background-size: cover;
   }
 
   @media screen and (min-width: 680px){

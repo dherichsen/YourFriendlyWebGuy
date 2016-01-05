@@ -18,8 +18,8 @@ html{ margin: 0; padding: 0;}
       position: absolute;
       bottom: 30vh;
       left: 50%;
-      width: 400px;
-      margin-left: -200px;
+      width: 300px;
+      margin-left: -150px;
       h1{
         position: relative;
         margin: 0 auto;
@@ -78,10 +78,14 @@ html{ margin: 0; padding: 0;}
       margin: 0 auto;
       width: 60px; height: 60px;
       text-align: center;
+      color: black;
       animation: bounce 2s infinite;
       -webkit-animation: bounce 2s infinite;
       -moz-animation: bounce 2s infinite;
       -o-animation: bounce 2s infinite;
+      .black-scroll{
+        color: black;
+      }
     }
     @import 'arrow';
   }
@@ -142,6 +146,7 @@ html{ margin: 0; padding: 0;}
 //@media screen and (min-device-width: 480px){
   .nav-top,
   .nav-menu,
+  .home-container-section,
   .about-container-header,
   .about-container-section,
   .portfolio-container-section,

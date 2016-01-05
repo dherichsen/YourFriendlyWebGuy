@@ -48,9 +48,9 @@ $(window).scroll(function() {
         $('.container-header').removeClass('container-header-absolute');
     }
     if($(window).scrollTop() > 100){
-        $('.scroll-button').css('display','none');
+        $('.container-header .scroll-button').css('display','none');
     }else{
-        $('.scroll-button').css('display','block');
+        $('.container-header .scroll-button').css('display','block');
     }
 });
 

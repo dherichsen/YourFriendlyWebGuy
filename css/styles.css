@@ -200,8 +200,8 @@ html {
       position: absolute;
       bottom: 30vh;
       left: 50%;
-      width: 400px;
-      margin-left: -200px; }
+      width: 300px;
+      margin-left: -150px; }
       .container .container-top .container-header h1 {
         position: relative;
         margin: 0 auto;
@@ -255,10 +255,13 @@ html {
       width: 60px;
       height: 60px;
       text-align: center;
+      color: black;
       animation: bounce 2s infinite;
       -webkit-animation: bounce 2s infinite;
       -moz-animation: bounce 2s infinite;
       -o-animation: bounce 2s infinite; }
+      .container .container-top .scroll-button .black-scroll {
+        color: black; }
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0); }
@@ -883,6 +886,42 @@ html {
       height: 100%;
       border-top: solid white 1px;
       background-color: #2A9D8F; }
+  .container .home-container-section h1 {
+    padding: 48px 0;
+    background: #2A9D8F;
+    color: white;
+    text-align: center; }
+  .container .home-container-section .home-services {
+    width: 100%;
+    font-size: 0;
+    background: white; }
+    .container .home-container-section .home-services .service-container {
+      display: block;
+      height: 300px;
+      border: 1px black solid; }
+      .container .home-container-section .home-services .service-container .service-top {
+        width: 225px;
+        height: 225px;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: #2A9D8F;
+        border: 1px black solid; }
+        .container .home-container-section .home-services .service-container .service-top a {
+          display: block;
+          position: relative; }
+          .container .home-container-section .home-services .service-container .service-top a .black-icon {
+            top: 25px;
+            left: 25px;
+            position: absolute;
+            font-size: 175px; }
+  @media screen and (min-width: 500px) {
+    .container .home-container-section .home-services .service-container {
+      display: inline-block;
+      width: 50%; } }
+  @media screen and (min-width: 800px) {
+    .container .home-container-section .home-services .service-container {
+      display: inline-block;
+      width: 33.333%; } }
   @media screen and (min-width: 480px) {
     .container .home-container {
       min-height: 480px; }
@@ -916,17 +955,13 @@ html {
     .container .home-bottom {
       height: 40vh; } }
   .container .about-background {
-    background: url("../images/himalayas.jpg") no-repeat center 20%;
-    background-size: cover; }
+    background: url("../images/himalayas.jpg") no-repeat center center; }
   .container .contact-background {
-    background: url("../images/florida-black.jpg") no-repeat center 40%;
-    background-size: cover; }
+    background: url("../images/florida-black.jpg") no-repeat center center; }
   .container .portfolio-background {
-    background: url("../images/newyork.jpg") no-repeat center 40%;
-    background-size: cover; }
+    background: url("../images/newyork.jpg") no-repeat center center; }
   .container .resources-background {
-    background: url("../images/office.jpg") no-repeat center 40%;
-    background-size: cover; }
+    background: url("../images/office.jpg") no-repeat center center; }
   @media screen and (min-width: 680px) {
     .container .about-background, .container .contact-background, .container .portfolio-background, .container .resources-background {
       background-attachment: fixed;
@@ -1375,6 +1410,7 @@ html {
     bottom: 20px; } }
 .nav-top,
 .nav-menu,
+.home-container-section,
 .about-container-header,
 .about-container-section,
 .portfolio-container-section,
@@ -1388,6 +1424,8 @@ html {
   .nav-top:before, .nav-top:after,
   .nav-menu:before,
   .nav-menu:after,
+  .home-container-section:before,
+  .home-container-section:after,
   .about-container-header:before,
   .about-container-header:after,
   .about-container-section:before,
@@ -1402,6 +1440,7 @@ html {
     display: table; }
   .nav-top:after,
   .nav-menu:after,
+  .home-container-section:after,
   .about-container-header:after,
   .about-container-section:after,
   .portfolio-container-section:after,
@@ -1410,6 +1449,7 @@ html {
     clear: both; }
   .nav-top > div,
   .nav-menu > div,
+  .home-container-section > div,
   .about-container-header > div,
   .about-container-section > div,
   .portfolio-container-section > div,
@@ -1422,6 +1462,7 @@ html {
     box-sizing: border-box; }
   .nav-top > li,
   .nav-menu > li,
+  .home-container-section > li,
   .about-container-header > li,
   .about-container-section > li,
   .portfolio-container-section > li,
