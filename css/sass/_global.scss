@@ -149,6 +149,10 @@ html{ margin: 0; padding: 0;}
         width: 600px;
         margin-left: -300px;
       }
+      .container-header-absolute{
+        position: absolute;
+        bottom: 20px;
+      }
     }
   }
 }
@@ -161,6 +165,10 @@ html{ margin: 0; padding: 0;}
         position: fixed;
         width: 800px;
         margin-left: -400px;
+      }
+      .container-header-absolute{
+        position: absolute;
+        bottom: 20px;
       }
     }
   }
