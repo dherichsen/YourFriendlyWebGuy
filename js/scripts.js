@@ -56,6 +56,23 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function(){
+
+
+    (function() {
+        var cards = document.querySelectorAll(".service-flipper");
+        for ( var i  = 0, len = cards.length; i < len; i++ ) {
+            var card = cards[i];
+            clickListener( card );
+        }
+
+        function clickListener(card) {
+            card.addEventListener( "click", function() {
+                var c = this.classList;
+                c.contains("clicked") === true ? c.remove("clicked") : c.add("clicked");
+            });
+        }
+    })();
+
     winHeight = $(window).height();
     toScroll = winHeight/2;
     // device detection
@@ -155,6 +172,15 @@ $(document).ready(function(){
             scrollTop: targetST + 'px'
         }, 700);
     });
+    // Make this more concise
+    $('#scrollbtnHome').on('click', function(event) {
+        event.preventDefault();
+        var targetST = winHeight;
+        //var targetST = $('#about').offset().top;
+        $('body, html').animate({
+            scrollTop: targetST + 'px'
+        }, 700);
+    });
 
     $('#dwnldResume').on('click',function(event){
        window.open('resources/dave_erichsen_resume.pdf');
@@ -204,11 +230,8 @@ $(document).ready(function(){
 
     // Handles navation
     $('.nav-bar-inner div').on('click', function(event) {
-        //event.preventDefault();
+        event.preventDefault();
         var targetID = $(this).children().attr('href');
-        var targetST = $(targetID).offset().top;
-        $('body, html').animate({
-            scrollTop: targetST + 'px'
-        }, 700);
+        window.location.href = targetID;
     });
 });
