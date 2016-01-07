@@ -933,15 +933,15 @@ html {
 .container .home-services-header {
   width: 100%;
   background: #2A9D8F;
-  border-bottom: 2px solid black; }
+  border-bottom: 2px solid black;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); }
 .container .home-services-header h1 {
   padding: 24px 0;
   color: white;
   text-align: center; }
 .container .home-container-section .home-services {
   width: 100%;
-  font-size: 0;
-  background: white; }
+  font-size: 0; }
 .container .home-container-section .home-services .service-container .service-flipper.clicked {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg); }
@@ -961,7 +961,7 @@ html {
   position: relative;
   cursor: pointer;
   border: 1px black solid;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.3) inset;
   background: #2A9D8F; }
 .container .home-container-section .home-services .service-container .service-front .black-icon, .container .home-container-section .home-services .service-container .service-back .black-icon, .container .home-container-section .home-services .service-container .service-top .black-icon {
   top: 37.5px;
@@ -992,8 +992,13 @@ html {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg); }
 .container .home-container-section .home-services .service-container .service-back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg); }
+  -webkit-transform: scale(1.15) rotateY(180deg);
+  transform: scale(1.15) rotateY(180deg);
+  background: white; }
+.container .home-container-section .home-services .service-container .service-back p {
+  text-align: center;
+  padding: 40px 10px 0 10px;
+  color: #2A9D8F; }
 .container .home-container-section .home-services .service-container .service-back h3 {
   margin-top: 100px;
   color: white;
@@ -1004,11 +1009,17 @@ html {
   transform: rotate(360deg);
   color: black; }
 .container .home-container-section .home-services .service-container .service-bottom h2 {
-  padding: 10px 0;
+  color: white;
+  padding-top: 20px;
   text-align: center;
   letter-spacing: 2px;
   height: 50px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+  /*text-shadow:
+  -1px -1px 0 white,
+  1px -1px 0 white,
+  -1px 1px 0 white,
+  1px 1px 0 white;
+  */ }
 @media screen and (min-width: 500px) {
   .container .home-container-section .home-services .service-container {
     vertical-align: top;
@@ -1077,6 +1088,8 @@ html {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAHElEQVQIW2N8fTjTmAEHYARJitpOP4tNftBJAgDvsxpSdI0OzQAAAABJRU5ErkJggg==") repeat; }
 .container .bg-five {
   background: url("../images/lil_fiber.png") repeat; }
+.container .bg-six {
+  background: url("../images/congruent_outline.png") repeat; }
 .container .bg-white-opac {
   background-color: rgba(255, 255, 255, 0.8); }
 @media screen and (min-width: 680px) {
