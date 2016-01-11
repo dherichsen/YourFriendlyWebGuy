@@ -41,6 +41,7 @@ $(window).scroll(function() {
      }
      */
     winHeight = $(window).height();
+    winHomeHeight = winHeight * 1.02;
     toScroll = winHeight/2;
     var offsetHeight = (winHeight * .3) - 20;
     if($(window).scrollTop() > offsetHeight){
@@ -74,6 +75,7 @@ $(document).ready(function(){
     })();
 
     winHeight = $(window).height();
+    winHomeHeight = winHeight * 1.02;
     toScroll = winHeight/2;
     // device detection
     var isMobile = false;
@@ -175,7 +177,7 @@ $(document).ready(function(){
     // Make this more concise
     $('#scrollbtnHome').on('click', function(event) {
         event.preventDefault();
-        var targetST = winHeight;
+        var targetST = winHomeHeight;
         //var targetST = $('#about').offset().top;
         $('body, html').animate({
             scrollTop: targetST + 'px'
